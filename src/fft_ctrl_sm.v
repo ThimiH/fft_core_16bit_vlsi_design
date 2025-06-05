@@ -6,7 +6,7 @@
 // Module:      Control State Machine for FFT
 // Description: This module implements the control state machine for the FFT operation.
 
-`include "read_addr_lut.v"
+`include "../src/read_addr_lut.v"
 
 module fft_ctrl_sm (
         input wire        clk,

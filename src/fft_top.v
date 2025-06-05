@@ -6,10 +6,10 @@
 // Module:      Top-level FFT module
 // Description: This module implements the top-level FFT functionality, integrating the butterfly operations, memory, and address LUTs.
 
-`include "fft_ctrl_sm.v"
-`include "mem_32x16.v"
-`include "w_lut.v"
-`include "butterfly.v"
+`include "../src/fft_ctrl_sm.v"
+`include "../src/mem_32x16.v"
+`include "../src/w_lut.v"
+`include "../src/butterfly.v"
 
 module fft_top (
         input wire        clk,             
