@@ -21,53 +21,213 @@ module read_addr_lut (
 
             0: begin
                 case (butterfly)
-                    0:  A_addr = 0;     B_addr = 8;     W_addr = 0;
-                    1:  A_addr = 4;     B_addr = 12;    W_addr = 0;
-                    2:  A_addr = 2;     B_addr = 10;    W_addr = 0;
-                    3:  A_addr = 6;     B_addr = 14;    W_addr = 0;
-                    4:  A_addr = 1;     B_addr = 9;     W_addr = 0;
-                    5:  A_addr = 5;     B_addr = 13;    W_addr = 0;
-                    6:  A_addr = 3;     B_addr = 11;    W_addr = 0;
-                    7:  A_addr = 7;     B_addr = 15;    W_addr = 0;
+                    0:  begin
+                        A_addr = 0;     
+                        B_addr = 8;     
+                        W_addr = 0;
+                    end
+
+                    1:  begin
+                        A_addr = 4;     
+                        B_addr = 12;    
+                        W_addr = 0;
+                    end
+
+                    2:  begin
+                        A_addr = 2;     
+                        B_addr = 10;    
+                        W_addr = 0;
+                    end
+
+                    3:  begin
+                        A_addr = 6;     
+                        B_addr = 14;    
+                        W_addr = 0;
+                    end
+
+                    4:  begin
+                        A_addr = 1;     
+                        B_addr = 9;     
+                        W_addr = 0;
+                    end
+
+                    5:  begin
+                        A_addr = 5;     
+                        B_addr = 13;    
+                        W_addr = 0;
+                    end
+
+                    6:  begin
+                        A_addr = 3;     
+                        B_addr = 11;    
+                        W_addr = 0;
+                    end
+
+                    7:  begin
+                        A_addr = 7;     
+                        B_addr = 15;    
+                        W_addr = 0;
+                    end
+
                 endcase
             end // case: 0
 
             1: begin
                 case (butterfly)
-                    0:  A_addr = 0;     B_addr = 4;     W_addr = 0;
-                    1:  A_addr = 8;     B_addr = 12;    W_addr = 4;
-                    2:  A_addr = 2;     B_addr = 6;     W_addr = 0;
-                    3:  A_addr = 10;    B_addr = 14;    W_addr = 4;
-                    4:  A_addr = 1;     B_addr = 5;     W_addr = 0;
-                    5:  A_addr = 9;     B_addr = 13;    W_addr = 4;
-                    6:  A_addr = 3;     B_addr = 7;     W_addr = 0;
-                    7:  A_addr = 11;    B_addr = 15;    W_addr = 4;
+                    0:  begin
+                        A_addr = 0;     
+                        B_addr = 4;     
+                        W_addr = 0;
+                    end
+
+                    1:  begin
+                        A_addr = 8;     
+                        B_addr = 12;    
+                        W_addr = 4;
+                    end
+
+                    2:  begin
+                        A_addr = 2;     
+                        B_addr = 6;     
+                        W_addr = 0;
+                    end
+
+                    3:  begin
+                        A_addr = 10;    
+                        B_addr = 14;    
+                        W_addr = 4;
+                    end
+
+                    4:  begin
+                        A_addr = 1;     
+                        B_addr = 5;     
+                        W_addr = 0;
+                    end
+
+                    5:  begin
+                        A_addr = 9;     
+                        B_addr = 13;    
+                        W_addr = 4;
+                    end
+
+                    6:  begin
+                        A_addr = 3;     
+                        B_addr = 7;     
+                        W_addr = 0;
+                    end
+
+                    7:  begin
+                        A_addr = 11;    
+                        B_addr = 15;    
+                        W_addr = 4;
+                    end
+
                 endcase
             end // case: 1
 
             2: begin
                 case (butterfly)
-                    0:  A_addr = 0;     B_addr = 2;     W_addr = 0;
-                    1:  A_addr = 8;     B_addr = 10;    W_addr = 2;
-                    2:  A_addr = 4;     B_addr = 6;     W_addr = 4;
-                    3:  A_addr = 12;    B_addr = 14;    W_addr = 6;
-                    4:  A_addr = 1;     B_addr = 3;     W_addr = 0;
-                    5:  A_addr = 9;     B_addr = 11;    W_addr = 2;
-                    6:  A_addr = 5;     B_addr = 7;     W_addr = 4;
-                    7:  A_addr = 13;    B_addr = 15;    W_addr = 6;
+                    0:  begin
+                        A_addr = 0;     
+                        B_addr = 2;     
+                        W_addr = 0;
+                    end
+
+                    1:  begin
+                        A_addr = 8;     
+                        B_addr = 10;    
+                        W_addr = 2;
+                    end
+
+                    2:  begin
+                        A_addr = 4;     
+                        B_addr = 6;     
+                        W_addr = 4;
+                    end
+
+                    3:  begin
+                        A_addr = 12;    
+                        B_addr = 14;    
+                        W_addr = 6;
+                    end
+
+                    4:  begin
+                        A_addr = 1;     
+                        B_addr = 3;     
+                        W_addr = 0;
+                    end
+
+                    5:  begin
+                        A_addr = 9;     
+                        B_addr = 11;    
+                        W_addr = 2;
+                    end
+
+                    6:  begin
+                        A_addr = 5;     
+                        B_addr = 7;     
+                        W_addr = 4;
+                    end
+
+                    7:  begin
+                        A_addr = 13;    
+                        B_addr = 15;    
+                        W_addr = 6;
+                    end
+
                 endcase
             end // case: 2
 
             3: begin
                 case (butterfly)
-                    0:  A_addr = 0;     B_addr = 1;     W_addr = 0;
-                    1:  A_addr = 8;     B_addr = 9;     W_addr = 1;
-                    2:  A_addr = 4;     B_addr = 5;     W_addr = 2;
-                    3:  A_addr = 12;    B_addr = 13;    W_addr = 3;
-                    4:  A_addr = 2;     B_addr = 3;     W_addr = 4;
-                    5:  A_addr = 10;    B_addr = 11;    W_addr = 5;
-                    6:  A_addr = 6;     B_addr = 7;     W_addr = 6;
-                    7:  A_addr = 14;    B_addr = 15;    W_addr = 7;
+                    0:  begin
+                        A_addr = 0;     
+                        B_addr = 1;     
+                        W_addr = 0;
+                    end
+
+                    1:  begin
+                        A_addr = 8;     
+                        B_addr = 9;     
+                        W_addr = 1;
+                    end
+
+                    2:  begin
+                        A_addr = 4;     
+                        B_addr = 5;     
+                        W_addr = 2;
+                    end
+
+                    3:  begin
+                        A_addr = 12;    
+                        B_addr = 13;    
+                        W_addr = 3;
+                    end
+
+                    4:  begin
+                        A_addr = 2;     
+                        B_addr = 3;     
+                        W_addr = 4;
+                    end
+
+                    5:  begin
+                        A_addr = 10;    
+                        B_addr = 11;    
+                        W_addr = 5;
+                    end
+
+                    6:  begin
+                        A_addr = 6;     
+                        B_addr = 7;     
+                        W_addr = 6;
+                    end
+
+                    7:  begin
+                        A_addr = 14;    
+                        B_addr = 15;    
+                        W_addr = 7;
+                    end
+
                 endcase
             end // case: 3
 
