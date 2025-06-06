@@ -1,0 +1,40 @@
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2-8_Full64; Runtime version T-2022.06-SP2-8_Full64;  Jun  6 08:48 2025
+VCD+ Writer T-2022.06-SP2-8_Full64 Copyright (c) 1991-2022 by Synopsys Inc.
+The file '/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/inter.vpd' was opened successfully.
+in(1) = 13604 + i*25479;
+in(2) = -28476 + i*-7513;
+in(3) = -704 + i*3963;
+in(4) = -22806 + i*-29338;
+in(5) = 27579 + i*-15199;
+in(6) = -23943 + i*16811;
+in(7) = 18392 + i*-32341;
+in(8) = -30866 + i*2846;
+in(9) = 28472 + i*-5850;
+in(10) = -23745 + i*-4193;
+in(11) = -2159 + i*-25023;
+in(12) = 2082 + i*15954;
+in(13) = 4700 + i*24652;
+in(14) = -1295 + i*12442;
+in(15) = -16546 + i*1918;
+in(16) = 26223 + i*-21680;
+out(1) = -1844 + i*-2318;
+out(2) = -4020 + i*3142;
+out(3) = -854 + i*782;
+out(4) = 6392 + i*3619;
+out(5) = 7820 + i*8291;
+out(6) = -886 + i*-428;
+out(7) = -1061 + i*4295;
+out(8) = -4512 + i*14810;
+out(9) = 11010 + i*-483;
+out(10) = -6247 + i*286;
+out(11) = 3248 + i*1078;
+out(12) = -777 + i*-5651;
+out(13) = 1600 + i*1779;
+out(14) = -2530 + i*-891;
+out(15) = 1114 + i*-3613;
+out(16) = 5140 + i*770;
+$finish called from file "../tb/fft_top_tb.v", line 173.
+$finish at simulation time               288000
+Simulation complete, time is 288000 ps.
