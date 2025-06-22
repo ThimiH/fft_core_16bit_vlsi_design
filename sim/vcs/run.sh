@@ -1,10 +1,10 @@
-#!/bin/bash
+#/bin/bash
 
 OUTDIR=sim/vcs/output
 mkdir -p $OUTDIR
 
 # Compile
-vcs -full64 -sverilog -debug_all -f sim/vcs/compile.f \
+vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/vcs/compile.f \
     -o $OUTDIR/fft_simv \
     +define+RTL_SIM \
     +vcs+lic+wait \
