@@ -2,7 +2,7 @@ Command: vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/
 -o sim/vcs/output/fft_simv +define+RTL_SIM +vcs+lic+wait -l sim/vcs/output/compile.log \
 
                          Chronologic VCS (TM)
-      Version T-2022.06-SP2-8_Full64 -- Sun Jun 22 16:32:28 2025
+      Version T-2022.06-SP2-8_Full64 -- Sun Jun 22 16:43:14 2025
 
                     Copyright (c) 1991 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -20,23 +20,30 @@ Command: vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
+Parsing design file 'rtl/fft_top.v'
+Parsing design file 'rtl/modules/fft_ctrl_sm.v'
+Parsing design file 'rtl/modules/mem_32x16.v'
+Parsing design file 'rtl/modules/w_lut.v'
+Parsing design file 'rtl/modules/butterfly.v'
+Parsing design file 'rtl/modules/read_addr_lut.v'
+Parsing design file 'tb/fft_top_tb.v'
+Top Level Modules:
+       fft_top_tb
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
 
-Warning-[PMFO] Potential misusage of '-f/-F' option
-  Potential misusage of '-f/-F' option, which can only be used in non-UUM 
-  flow.
-  The option '-f/-F' cannot be used in UUM flow.It could cause an error saying
-  that the top unit is treated as source file in the UUM flow.If VCS is 
-  intended to be run in non-UUM flow, please check if source files are 
-  specified correctly.Otherwise please use '-file' option for UUM flow.
-
-
-Error-[SFCOR] Source file cannot be opened
-  Source file "/rtl/fft_top.v" cannot be opened for reading due to 'No such 
-  file or directory'.
-  Please fix above issue and compile again.
-  
-  
-
-1 warning
-1 error
-CPU time: .140 seconds to compile
+1 module and 0 UDP read.
+recompiling module fft_top_tb
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../sim/vcs/output/fft_simv ]; then chmod a-x ../sim/vcs/output/fft_simv; \
+fi
+g++  -o ../sim/vcs/output/fft_simv      -rdynamic  -Wl,-rpath='$ORIGIN'/fft_simv.daidir \
+-Wl,-rpath=./fft_simv.daidir -Wl,-rpath=/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib \
+-L/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 \
+objs/amcQw_d.o   _20706_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
+rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc \
+-lvfs    -lvcsnew -lsimprofile -luclinative /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/vcs_save_restore_new.o \
+-ldl  -lc -lm -lpthread -ldl 
+../sim/vcs/output/fft_simv up to date
+CPU time: .364 seconds to compile + .297 seconds to elab + .147 seconds to link
