@@ -1,6 +1,6 @@
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06-SP2-8_Full64; Runtime version T-2022.06-SP2-8_Full64;  Jun 22 16:44 2025
+Compiler version T-2022.06-SP2-8_Full64; Runtime version T-2022.06-SP2-8_Full64;  Jun 22 20:55 2025
 VCD+ Writer T-2022.06-SP2-8_Full64 Copyright (c) 1991-2022 by Synopsys Inc.
 The file '/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/sim/vcs/output/inter.vpd' was opened successfully.
 
@@ -52,57 +52,7 @@ out(16) = 2047 + i*0;
 $finish called from file "tb/fft_top_tb.v", line 177.
 $finish at simulation time               288000
 Simulation complete, time is 288000 ps.
-Chronologic VCS simulator copyright 1991-2022
-Contains Synopsys proprietary information.
-Compiler version T-2022.06-SP2-8_Full64; Runtime version T-2022.06-SP2-8_Full64;  Jun 22 16:45 2025
-VCD+ Writer T-2022.06-SP2-8_Full64 Copyright (c) 1991-2022 by Synopsys Inc.
-The file '/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/sim/vcs/output/inter.vpd' was opened successfully.
-
-Warning-[STASKW_CO] Cannot open file
-tb/fft_top_tb.v, 63
-  The file '../tb/data/data_in.txt' could not be opened. No such file or 
-  directory.
-  Please ensure that the file exists with proper permissions.
-
-
-Warning-[STASKW_CO] Cannot open file
-tb/fft_top_tb.v, 97
-  The file '../tb/data/data_out.txt' could not be opened. No such file or 
-  directory.
-  Please ensure that the file exists with proper permissions.
-
-in(1) = 32767 + i*0;
-in(2) = 0 + i*0;
-in(3) = 0 + i*0;
-in(4) = 0 + i*0;
-in(5) = 0 + i*0;
-in(6) = 0 + i*0;
-in(7) = 0 + i*0;
-in(8) = 0 + i*0;
-in(9) = 0 + i*0;
-in(10) = 0 + i*0;
-in(11) = 0 + i*0;
-in(12) = 0 + i*0;
-in(13) = 0 + i*0;
-in(14) = 0 + i*0;
-in(15) = 0 + i*0;
-in(16) = 0 + i*0;
-out(1) = 2047 + i*0;
-out(2) = 2047 + i*0;
-out(3) = 2047 + i*0;
-out(4) = 2047 + i*0;
-out(5) = 2047 + i*0;
-out(6) = 2047 + i*0;
-out(7) = 2047 + i*0;
-out(8) = 2047 + i*0;
-out(9) = 2047 + i*0;
-out(10) = 2047 + i*0;
-out(11) = 2047 + i*0;
-out(12) = 2047 + i*0;
-out(13) = 2047 + i*0;
-out(14) = 2047 + i*0;
-out(15) = 2047 + i*0;
-out(16) = 2047 + i*0;
-$finish called from file "tb/fft_top_tb.v", line 177.
-$finish at simulation time               288000
-Simulation complete, time is 288000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 288000 ps
+CPU Time:      0.890 seconds;       Data structure size:   0.0Mb
+Sun Jun 22 21:17:34 2025

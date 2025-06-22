@@ -1,0 +1,8 @@
+<Command name="schRTLInfo"  delimiter="."  >
+<RTLBlock >
+<RTLInfo   name="current_state_F_0"  type="2"  fileName="rtl/modules/fft_ctrl_sm.v"  >
+    <Seg beginLine="153"  endLine="315"  />
+  </RTLInfo>
+ <Instance name="fft_top_tb.fft_top_0.fft_ctrl_sm_0"  />
+</RTLBlock>
+ </Command>

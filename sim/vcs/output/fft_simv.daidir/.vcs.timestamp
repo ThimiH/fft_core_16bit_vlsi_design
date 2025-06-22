@@ -1,5 +1,5 @@
 0
-35
+39
 +define+RTL_SIM
 +itf+/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/vcsdp_lite.tab
 +vcs+lic+wait
@@ -22,6 +22,8 @@
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/include
 -Mxllcflags=
+-cm
+-cm_dir
 -debug_acc+all
 -debug_region+cell+encrypt
 -f sim/vcs/compile.f
@@ -33,10 +35,12 @@
 -sverilog
 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/bin/vcs1
 sim/vcs/output/compile.log
+line+cond+tgl+fsm+branch
+sim/vcs/output/cov_work
 sim/vcs/output/fft_simv
 sim/vcs/compile.f
 46
-XDG_SESSION_ID=106
+XDG_SESSION_ID=46
 XDG_RUNTIME_DIR=/run/user/1010
 XDG_DATA_DIRS=/home/vlsi_lab/user10/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
@@ -55,8 +59,8 @@ UNAME=/bin/uname
 TOOL_HOME=/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64
 SYNOPSYS_LC_ROOT=/home/vlsi_lab/synopsys/library_compiler/lc/U-2022.12-SP6/bin
 SSH_TTY=/dev/pts/0
-SSH_CONNECTION=112.134.191.96 52250 10.40.16.141 22651
-SSH_CLIENT=112.134.191.96 52250 22651
+SSH_CONNECTION=112.134.191.96 51484 10.40.16.141 22651
+SSH_CLIENT=112.134.191.96 51484 22651
 SNPS_VCS_CLANG_PATH=/home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
 SELINUX_USE_CURRENT_RANGE=
@@ -84,14 +88,15 @@ LC_ADDRESS=en_GB.UTF-8
 HISTCONTROL=ignoredups
 0
 0
-9
-1750589265 tb/fft_top_tb.v
+10
+1750608812 tb/fft_top_tb.v
 1750589265 rtl/modules/read_addr_lut.v
 1750589265 rtl/modules/butterfly.v
 1750589265 rtl/modules/w_lut.v
 1750589265 rtl/modules/mem_32x16.v
 1750589265 rtl/modules/fft_ctrl_sm.v
 1750589265 rtl/fft_top.v
+1701576358 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/include/cm_vcsd.tab
 1750590789 sim/vcs/compile.f
 1701576592 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/vcsdp_lite.tab
 4
@@ -99,5 +104,5 @@ HISTCONTROL=ignoredups
 1701577091 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/liberrorinf.so
 1701577050 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/libsnpsmalloc.so
 1701577087 /home/vlsi_lab/synopsys/vcs/T-2022.06-SP2-8/linux64/lib/libvfs.so
-1750590795 sim/vcs/output/fft_simv.daidir
+1750608816 sim/vcs/output/fft_simv.daidir
 -1 partitionlib

@@ -1,0 +1,5 @@
+{"comelab":{"timestamp_begin":1750607363.718167821, "rt":1.55, "ut":0.44, "st":0.35}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1750607363.336921895}
+{"VCS_COMP_START_TIME": 1750607363.336921895}
+{"VCS_COMP_END_TIME": 1750607365.324508189}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -cm line+cond+tgl+fsm+branch  "}

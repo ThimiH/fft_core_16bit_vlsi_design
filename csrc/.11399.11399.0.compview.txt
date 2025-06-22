@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1750593751.030436092, "rt":8.69, "ut":0.05, "st":0.04}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1750593750.653625290}
+{"VCS_COMP_START_TIME": 1750593750.653625290}
+{"VCS_COMP_END_TIME": 1750593759.774398770}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/vcs/compile.f -o sim/vcs/output/fft_simv +define+RTL_SIM +vcs+lic+wait -l sim/vcs/output/compile.log"}
