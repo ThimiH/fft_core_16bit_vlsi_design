@@ -1,7 +1,7 @@
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/butterfly.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/fft_ctrl_sm.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/fft_top.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/mem_32x16.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/read_addr_lut.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/src/w_lut.v
-/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/tb/fft_top_tb.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/butterfly.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/fft_ctrl_sm.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/fft_top.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/mem_32x16.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/read_addr_lut.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/src/w_lut.v
+/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/tb/fft_top_tb.v

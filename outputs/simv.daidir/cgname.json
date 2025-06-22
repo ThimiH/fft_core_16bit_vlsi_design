@@ -1,10 +1,4 @@
 {
-    "std": [
-        "std",
-        "reYIK",
-        "module",
-        1
-    ],
     "fft_top_tb": [
         "fft_top_tb",
         "FksdP",

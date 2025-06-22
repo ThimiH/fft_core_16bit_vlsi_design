@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1750533907.923901030, "rt":0.48, "ut":0.23, "st":0.12}}
+{"vcselab":{"timestamp_begin":1750533908.446714005, "rt":0.19, "ut":0.15, "st":0.02}}
+{"link":{"timestamp_begin":1750533908.670701833, "rt":0.14, "ut":0.08, "st":0.06}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1750533907.670574812}
+{"VCS_COMP_START_TIME": 1750533907.670574812}
+{"VCS_COMP_END_TIME": 1750533908.880254833}
+{"VCS_USER_OPTIONS": "-full64 ../src/fft_top.v ../tb/fft_top_tb.v -debug_access+r"}
+{"vcs1": {"peak_mem": 341776}}
+{"stitch_vcselab": {"peak_mem": 216952}}

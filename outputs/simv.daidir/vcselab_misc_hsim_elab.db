@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir
+pDaiDir                            	/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
@@ -223,8 +223,8 @@ fHsimAmsNewDrs                     	0
 fHsimScUpwardXmrNoSplit            	1
 fHsimOrigNdbViewOnly               	0
 fHsimVcsInterface                  	1
-fHsimVcsInterfaceAlias             	1
-fHsimSVTypesIntf                   	1
+fHsimVcsInterfaceAlias             	0
+fHsimSVTypesIntf                   	0
 fUnifiedAssertCtrlDiag             	0
 fHsimEnable2StateScal              	0
 fHsimDisable2StateScalIbn          	0
@@ -674,7 +674,7 @@ fPulseOpt                          	0
 fGblPulseOnD                       	0
 fGblPulseOnE                       	0
 fVCSiFlow                          	0
-fSystemVCSEnabled                  	1
+fSystemVCSEnabled                  	0
 fHsimForcedPort                    	0
 fpicOption                         	1
 fModelSave                         	0
@@ -890,7 +890,7 @@ fHsimNewDebugOptMemDiag            	0
 hsGlobalVerboseLevel               	0
 fHsimTestPxpcode                   	0
 fHsimMdbVectorConstProp            	1
-fHsimEnableSeqUdpWrite             	1
+fHsimEnableSeqUdpWrite             	0
 fHsimDumpMDBOnlyForSeqUdp          	0
 fHsimInitRegRandom                 	0
 fHsimInitRegRandomVcs              	1

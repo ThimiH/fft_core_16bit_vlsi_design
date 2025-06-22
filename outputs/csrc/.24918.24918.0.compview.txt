@@ -1,0 +1,6 @@
+{"vcs1":{"timestamp_begin":1750533636.108157257, "rt":0.12, "ut":0.06, "st":0.04}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1750533635.869564102}
+{"VCS_COMP_START_TIME": 1750533635.869564102}
+{"VCS_COMP_END_TIME": 1750533636.267254656}
+{"VCS_USER_OPTIONS": "-full64 ../src/fft_top.v ../tb/fft_top_tb.v -debug_access+r"}
+{"vcs1": {"peak_mem": 324872}}

@@ -4,29 +4,37 @@ ucliCore::getToolPID
 synopsys::env hasTB
 trigger_hier_stack_context_switch 0
 synUtils::setDVEInitPhase 1
-synopsys::dump -type VPD -file /home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/inter.vpd -locking
+synopsys::dump -type VPD -file /home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/inter.vpd -locking
 synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpf5xRVp
-synUtils::sendTool -active {_icl_start_rpc -version "T-2022.06-SP2-8_Full64" -sync_file /tmp/vcs_dve_rpc.user1.32654}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user1.32654}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpZD4eiy
+synUtils::sendTool -active {_icl_start_rpc -version "T-2022.06-SP2-8_Full64" -sync_file /tmp/vcs_dve_rpc.user10.30951}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user10.30951}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-synopsys::dump -add {fft_top_tb.clk } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_real } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_imag } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_push } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.clk } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.reset } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_real } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_imag } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_push } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.i } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.r } -aggregates  -fid VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

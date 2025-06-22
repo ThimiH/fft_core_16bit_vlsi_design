@@ -1,6 +1,6 @@
 #!/bin/sh -h 
 
-FILE_PATH="/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch"
+FILE_PATH="/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch"
 lockfile="${FILE_PATH}"/lock
 
 FSearch_lock_release() {
@@ -32,13 +32,13 @@ if [ -d "$dir_name"/../../../../../../../../../.. ]; then
     cd "$dir_name"/../../../../../../../../../..
 fi
 
-if [ -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
-    if [ ! -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
+if [ -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
+    if [ ! -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
         if [ "$#" -eq 1 ] && [ "x$1" == "x-background" ]; then
             trap FSearch_lock_release EXIT
             (
                 flock 193
-                create_fsearch_db_ctrl "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+                create_fsearch_db_ctrl "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
                 exit 193
             ) 193> "$lockfile"
             rstat=$?
@@ -46,12 +46,12 @@ if [ -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design
                 exit $rstat
             fi
         else
-            "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
-            if [ -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-               rm -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat"
+            "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+            if [ -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+               rm -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat"
             fi
         fi
-    elif [ -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-       rm -f "/home/vlsi_lab/user1/mini_project/rtl_design/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat"
+    elif [ -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+       rm -f "/home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/outputs/simv.daidir/debug_dump/fsearch/fsearch.stat"
     fi
 fi

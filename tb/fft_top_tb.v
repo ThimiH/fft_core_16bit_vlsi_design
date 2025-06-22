@@ -56,7 +56,9 @@ module fft_top_tb;
     initial begin: RECORD_INPUT
 
         integer input_file;
-        integer count = 0;
+        integer count;
+	
+	count = 0;
 
         input_file = $fopen("../outputs/data_in.txt", "w");
 
@@ -87,8 +89,10 @@ module fft_top_tb;
     initial begin: RECORD_OUTPUT
 
         integer output_file;
-        integer count = 0;
+        integer count;
         integer j;
+
+	count = 0;
 
         output_file = $fopen("../outputs/data_out.txt", "w");
 
