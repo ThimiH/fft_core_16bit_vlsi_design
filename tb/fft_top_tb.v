@@ -137,13 +137,13 @@ module fft_top_tb;
 
             // Activate one case at a time by commenting out the others.
 
-            // Case (i)
-            in_real = (i == 0)? 16'h7fff : 0;
-            in_imag = 0;
-
-            // // Case (ii)
-            // in_real = (i == 1)? 16'h7fff : 0;
+            // // Case (i)
+            // in_real = (i == 0)? 16'h7fff : 0;
             // in_imag = 0;
+
+            // Case (ii)
+            in_real = (i == 1)? 16'h7fff : 0;
+            in_imag = 0;
 
             // // Case (iii)
             // in_real = (i <= 5 || i >= 11)? 16'h7fff : 0;
