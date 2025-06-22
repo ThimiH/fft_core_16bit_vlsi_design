@@ -9,20 +9,20 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpNqVJXC
-synUtils::sendTool -active {_icl_start_rpc -version "T-2022.06-SP2-8_Full64" -sync_file /tmp/vcs_dve_rpc.user10.16082}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user10.16082}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpTJQrAo
+synUtils::sendTool -active {_icl_start_rpc -version "T-2022.06-SP2-8_Full64" -sync_file /tmp/vcs_dve_rpc.user10.26967}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user10.26967}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-synopsys::dump -add {fft_top_tb.clk } -aggregates  -fid VPD0
-synopsys::dump -add {fft_top_tb.reset } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_real } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_imag } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.in_push } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.clk } -aggregates  -fid VPD0
+synopsys::dump -add {fft_top_tb.reset } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_real } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_imag } -aggregates  -fid VPD0
 synopsys::dump -add {fft_top_tb.out_push } -aggregates  -fid VPD0
