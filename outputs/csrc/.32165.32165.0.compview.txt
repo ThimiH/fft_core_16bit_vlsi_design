@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1749179885.449492987, "rt":0.29, "ut":0.18, "st":0.09}}
-{"vcselab":{"timestamp_begin":1749179885.793244865, "rt":0.26, "ut":0.19, "st":0.06}}
-{"link":{"timestamp_begin":1749179886.085618396, "rt":0.10, "ut":0.06, "st":0.04}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1749179885.116190415}
-{"VCS_COMP_START_TIME": 1749179885.116190415}
-{"VCS_COMP_END_TIME": 1749179886.262807478}
-{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_all ../src/fft_top.v ../tb/fft_top_tb.v -o simv"}
-{"vcs1": {"peak_mem": 343200}}
-{"stitch_vcselab": {"peak_mem": 216980}}

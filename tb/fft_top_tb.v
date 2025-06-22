@@ -60,7 +60,7 @@ module fft_top_tb;
 	
 	count = 0;
 
-        input_file = $fopen("../outputs/data_in.txt", "w");
+        input_file = $fopen("../tb/data/data_in.txt", "w");
 
         $fdisplay(input_file, "Testing...");
         $fdisplay(input_file, "Testing...");
@@ -94,7 +94,7 @@ module fft_top_tb;
 
 	count = 0;
 
-        output_file = $fopen("../outputs/data_out.txt", "w");
+        output_file = $fopen("../tb/data/data_out.txt", "w");
 
         while (count < 16) begin
 
