@@ -1,9 +1,9 @@
 # === Setup ===
 set DESIGN_NAME fft_top
-set RTL_PATH ../../rtl
-set OUTDIR ../output
-set REPORTDIR ../reports
-set LIBDIR ../../libs/sky130_fd_sc_hd
+set RTL_PATH ../rtl
+set OUTDIR output
+set REPORTDIR reports
+set LIBDIR ../libs/sky130_fd_sc_hd
 
 # === Read Libraries ===
 # Load technology library (.db)
