@@ -1,60 +1,70 @@
-# === Setup ===
-set DESIGN_NAME fft_top
-set RTL_PATH ../rtl
-set OUTDIR output
-set REPORTDIR reports
-set LIBDIR ../libs/sky130_fd_sc_hd
+# Created by: Thimira Hirushan
+# Date: 2025-07-04
+# Project: FFT Core 16-bit VLSI Design
+# Description: This script compiles the FFT design using Design Compiler.
 
-# === Read Libraries ===
-# Load technology library (.db)
-set target_library "$LIBDIR/sky130_fd_sc_hd__tt_025C_1v80.db"
-set link_library "* $target_library"
+# =========[ Design Compiler Synthesis Script ]=========
+# Set library
+set target_library [list ../libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db]
+set link_library [list * $target_library]
+set synthetic_library [list dw_foundation.sldb]
 
-# (Optional) Load .lib if needed for certain reports
-# read_lib $LIBDIR/sky130_fd_sc_hd__tt_025C_1v80.lib  # Commented out - Library Compiler not available
-
-# === Read RTL ===
-# Read all module files first (dependencies)
-read_verilog $RTL_PATH/modules/butterfly.v
-read_verilog $RTL_PATH/modules/fft_ctrl_sm.v
-read_verilog $RTL_PATH/modules/mem_32x16.v
-read_verilog $RTL_PATH/modules/read_addr_lut.v
-read_verilog $RTL_PATH/modules/w_lut.v
-
-# Read top-level module last
-read_verilog $RTL_PATH/fft_top.v
-
-# === Set Top Module ===
-current_design $DESIGN_NAME
-
-# === Link Design ===
-# Verify all references are resolved
-link
-if { [check_design] != 0 } {
-    echo "Error: Design has unresolved references or other issues"
-    exit 1
+# Read Verilog files (Update file list as needed)
+read_verilog {
+  ../rtl/modules/fft_ctrl_sm.v
+  ../rtl/modules/butterfly.v
+  ../rtl/modules/w_lut.v
+  ../rtl/modules/mem_32x16.v
+  ../rtl/fft_top.v
 }
+current_design fft_top
 
-# === Create Clock ===
-create_clock -period 10 [get_ports clk]   ;# 100 MHz
+# Set clock
+create_clock -name MYCLK -period 10 [get_ports clk]
+set_clock_uncertainty 1.0 [get_clocks MYCLK]
+set_clock_uncertainty -hold 0.2 [get_clocks MYCLK]
 
-# === Set Output Load ===
-# set_load 0.05 [all_outputs]            ;# Optional
+# Input delays
+set_input_delay -max 2 [get_ports "in_real[*]"]
+set_input_delay -min 0.1 [get_ports "in_real[*]"]
+set_input_delay -max 2 [get_ports "in_imag[*]"]
+set_input_delay -min 0.1 [get_ports "in_imag[*]"]
 
-# === Compile Design ===
+# Output delays
+set_output_delay -max 2 [get_ports "out_real_F[*]"]
+set_output_delay -min 0.1 [get_ports "out_real_F[*]"]
+set_output_delay -max 2 [get_ports "out_imag_F[*]"]
+set_output_delay -min 0.1 [get_ports "out_imag_F[*]"]
+
+# Compile
 compile_ultra
 
-# === Write Outputs ===
-# Create output directory if it doesn't exist
-file mkdir $OUTDIR
-file mkdir $REPORTDIR
+# Generate reports
+report_timing -to [get_ports "out_real_F[*]"] > reports/timing_out_real.rpt
+report_timing -to [get_ports "out_imag_F[*]"] > reports/timing_out_imag.rpt
+report_power > reports/power.rpt
+report_area > reports/area.rpt
+report_port -verbose > reports/ports.rpt
 
-write -format verilog -hierarchy -output $OUTDIR/${DESIGN_NAME}_synth.v
-write_sdc $OUTDIR/${DESIGN_NAME}.sdc
+# Write synthesized netlist
+write -format verilog -hierarchy -output ../netlist/fft_netlist.v
 
-# === Reports ===
-report_area      > $REPORTDIR/area.rpt
-report_timing    > $REPORTDIR/timing.rpt
-report_qor       > $REPORTDIR/qor.rpt
-report_cells     > $REPORTDIR/cells.rpt
-report_resources > $REPORTDIR/resources.rpt
+# Save DC session info for Formality
+write_sdf -version 2.1 ../netlist/fft.sdf
+write_svf -output ../netlist/fft.svf
+
+# Save the design state
+write_design -output ../netlist/fft_design.dcn
+# Save the design in a format suitable for Formality
+write_formality -output ../netlist/fft_formality.dcn
+# Save the design in a format suitable for RTL Viewer
+write_rtl_viewer -output ../netlist/fft_rtl_viewer.dcn
+# Save the design in a format suitable for Verilog simulation
+write_verilog -output ../netlist/fft_sim.v
+# Save the design in a format suitable for VCD generation
+write_vcd -output ../netlist/fft.vcd
+# Save the design in a format suitable for GDSII generation
+write_gds -output ../netlist/fft.gds
+
+# # Exit
+# exit
