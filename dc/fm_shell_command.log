@@ -1,0 +1,72 @@
+#@ # 
+#@ # Running fm_shell Version V-2023.12-SP5 for linux64 -- Jul  3, 2024
+#@ # Date:   Sat Jul  5 00:22:22 2025
+#@ # Run by: user10@vlsilab
+#@ 
+
+source /home/vlsi_lab/synopsys/fm/V-2023.12-SP5/admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /home/vlsi_lab/synopsys/fm/V-2023.12-SP5/admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" || \
+#@      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /home/vlsi_lab/synopsys/fm/V-2023.12-SP5/admin/setup/.synopsys_fm.setup
+
+set_svf default.svf 
+read_verilog ../rtl/modules/fft_ctrl_sm.v 
+set_current_design_container golden
+read_verilog ../rtl/modules/fft_ctrl_sm.v
+set_current_design_container golden
+set_reference_design fft_top
+set_reference_design 
+read_verilog -golden ../rtl/modules/fft_ctrl_sm.v
+set_svf default.svf
+set_reference_design fft_top
+read_verilog -container r -libname WORK ../rtl/modules/fft_ctrl_sm.v
+read_verilog -container r -libname WORK ../rtl/modules/butterfly.v 
+read_verilog -container r -libname WORK ../rtl/modules/w_lut.v 
+read_verilog -container r -libname WORK ../rtl/modules/mem_32x16.v 
+read_verilog -container r -libname WORK ../rtl/modules/read_addr_lut.v 
+read_verilog -container r -libname WORK ../rtl/fft_top.v 
+read_verilog -container i -libname WORK ../netlist/fft_netlist.v 
+set_reference_design fft_top
+read_verilog -container i -libname WORK ../netlist/fft_netlist.v
+read_verilog -container i -libname WORK ../netlist/fft_netlist.v
+set_reference_design fft_top
+exit

@@ -1,7 +1,7 @@
 # ========== Formality Equivalence Checking Script ==========
 
 # Read SVF from DC
-read_svf -input ../netlist/fft.svf
+set_svf ../netlist/fft.svf
 
 # Set top module
 set_top fft_top
