@@ -3,7 +3,19 @@
 # Project: FFT Core 16-bit VLSI Design
 # Description: This script compiles the FFT design using Design Compiler.
 
+# ======== Directory Configuration ========
+set project_root   "../"
+set log_dir        "${project_root}/logs"
+set netlist_dir    "${project_root}/netlist"
+set report_dir     "${project_root}/reports"
+
+# Create directories if they don't exist
+file mkdir $log_dir
+file mkdir $netlist_dir
+file mkdir $report_dir
+
 # =========[ Design Compiler Synthesis Script ]=========
+
 # Set library
 set target_library [list ../libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db]
 set link_library [list * $target_library]
@@ -53,19 +65,6 @@ write -format verilog -hierarchy -output ../netlist/fft_netlist.v
 # Save DC session info for Formality
 write_sdf -version 2.1 ../netlist/fft.sdf
 write_svf -output ../netlist/fft.svf
-
-# Save the design state
-write_design -output ../netlist/fft_design.dcn
-# Save the design in a format suitable for Formality
-write_formality -output ../netlist/fft_formality.dcn
-# Save the design in a format suitable for RTL Viewer
-write_rtl_viewer -output ../netlist/fft_rtl_viewer.dcn
-# Save the design in a format suitable for Verilog simulation
-write_verilog -output ../netlist/fft_sim.v
-# Save the design in a format suitable for VCD generation
-write_vcd -output ../netlist/fft.vcd
-# Save the design in a format suitable for GDSII generation
-write_gds -output ../netlist/fft.gds
 
 # # Exit
 # exit
