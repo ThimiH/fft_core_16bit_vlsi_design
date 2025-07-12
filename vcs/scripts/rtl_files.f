@@ -4,3 +4,4 @@
 ../rtl/modules/mem_32x16.v
 ../rtl/modules/read_addr_lut.v
 ../rtl/fft_top.v
+../tb/fft_top_tb.v

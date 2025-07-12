@@ -4,7 +4,7 @@ OUTDIR=output
 mkdir -p $OUTDIR
 
 # Compile
-vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/vcs/compile.f \
+vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f scripts/rtl_files.f \
     -o $OUTDIR/fft_simv \
     +define+RTL_SIM \
     +vcs+lic+wait \
