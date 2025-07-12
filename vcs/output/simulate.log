@@ -1,0 +1,9 @@
+Command: /home/vlsi_lab/user10/Documents/steps/fft_core_16bit_vlsi_design/vcs/output/./fft_simv -ucli -l simulate.log -gui
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2-8_Full64; Runtime version T-2022.06-SP2-8_Full64;  Jul 12 12:35 2025
+VCD+ Writer T-2022.06-SP2-8_Full64 Copyright (c) 1991-2022 by Synopsys Inc.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      1.100 seconds;       Data structure size:   0.0Mb
+Sat Jul 12 12:35:43 2025

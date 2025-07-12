@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1752303500.815753753, "rt":4.78, "ut":0.54, "st":0.44}}
+{"vcselab":{"timestamp_begin":1752303505.725636411, "rt":2.02, "ut":0.38, "st":0.22}}
+{"link":{"timestamp_begin":1752303507.877704873, "rt":0.50, "ut":0.16, "st":0.11}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1752303499.925557672}
+{"VCS_COMP_START_TIME": 1752303499.925557672}
+{"VCS_COMP_END_TIME": 1752303508.682345253}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f scripts/rtl_files.f -o output/fft_simv +define+RTL_SIM +vcs+lic+wait -l output/compile.log"}
+{"vcs1": {"peak_mem": 341968}}
+{"stitch_vcselab": {"peak_mem": 216988}}
