@@ -1,0 +1,15 @@
+# !/bin/bash
+
+OUTDIR=output
+mkdir -p $OUTDIR
+
+# Compile
+vcs -full64 -sverilog -debug_acc+all -debug_region+cell+encrypt -f sim/vcs/compile.f \
+    -o $OUTDIR/fft_simv \
+    +define+RTL_SIM \
+    +vcs+lic+wait \
+    -l $OUTDIR/compile.log
+
+# Simulate with GUI
+cd $OUTDIR
+./fft_simv -ucli -l simulate.log -gui
