@@ -46,8 +46,8 @@ report_timing -path_type summary > reports/timing_path_summary.rpt
 # 4. Clock report
 report_clock > reports/clock_report.rpt
 
-# 5. Clock tree report
-report_clock_tree > reports/clock_tree_report.rpt
+# 5. Clock analysis (report_clock_tree not available in PT, using clock analysis instead)
+report_clock -attributes > reports/clock_attributes.rpt
 
 # Part II: Generate Slack and Violation Reports
 
@@ -57,8 +57,8 @@ check_timing > reports/check_timing.rpt
 # Report all violators
 report_constraint -all_violators > reports/constraint_violations.rpt
 
-# Report timing summary
-report_timing -path_type summary -slack_only > reports/timing_slack_summary.rpt
+# Report timing summary with slack information
+report_timing -path_type summary > reports/timing_slack_summary.rpt
 
 # Report setup violations
 report_timing -delay_type max -max_paths 20 -slack_lesser_than 0.0 > reports/setup_violations.rpt
@@ -72,8 +72,8 @@ report_clock -skew > reports/clock_skew.rpt
 # Report design statistics
 report_design > reports/design_stats.rpt
 
-# Report area
-report_area > reports/area_report.rpt
+# Report area information (using report_reference for area info)
+report_reference > reports/area_reference.rpt
 
 # Report power
 report_power > reports/power_report.rpt
