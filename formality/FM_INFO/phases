@@ -1,0 +1,44 @@
+Phase: set_top
+  Begin   : Tue Jul 22 10:24:16 2025
+  End     : Tue Jul 22 10:24:16 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 11.2 GB free)
+
+Phase: set_top - reference
+  Begin   : Tue Jul 22 10:41:22 2025
+  End     : Tue Jul 22 10:41:22 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 10.9 GB free)
+
+Phase: set_top - implementation
+  Begin   : Tue Jul 22 10:42:38 2025
+  End     : Tue Jul 22 10:42:38 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 10.9 GB free)
+
+Phase: set_top - implementation
+  Begin   : Tue Jul 22 10:44:01 2025
+  End     : Tue Jul 22 10:44:02 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 10.9 GB free)
+
+Phase: set_top - implementation
+  Begin   : Tue Jul 22 10:45:15 2025
+  End     : Tue Jul 22 10:45:15 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 10.9 GB free)
+
+Phase: match
+  Begin   : Tue Jul 22 10:45:40 2025
+  End     : Tue Jul 22 10:45:47 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.2 GB (0.2 GB max, 10.9 GB free)
+
+Phase: verify
+  Begin   : Tue Jul 22 10:46:11 2025
+  End     : Tue Jul 22 10:46:14 2025
+  Duration: 0.00 hours
+  Memory  : 0.2 -> 0.3 GB (0.3 GB max, 10.8 GB free)
+  Status  : Verification SUCCEEDED
+  Status  : 0F/0A/1039P/0U
+
