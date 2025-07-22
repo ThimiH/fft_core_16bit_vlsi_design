@@ -60,7 +60,12 @@ write -format verilog -hierarchy -output ../netlists/fft_netlist.v
 
 # Save DC session info for Formality
 write_sdf -version 2.1 ../netlists/fft.sdf
-write_svf -output ../netlists/fft.svf
+
+# Write SDC file for downstream tools (P&R, STA)
+write_sdc ../netlists/fft_constraints.sdc
+
+# Write design database for reference
+write -format ddc -hierarchy -output ../netlists/fft_top.ddc
 
 # # Exit
 # exit

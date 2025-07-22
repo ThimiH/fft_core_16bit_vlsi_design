@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : fft_top
+Version: V-2023.12
+Date   : Tue Jul 22 15:28:47 2025
+****************************************
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   fft_top                      0.00          20.18         -20.18  (VIOLATED)
+
+
+1

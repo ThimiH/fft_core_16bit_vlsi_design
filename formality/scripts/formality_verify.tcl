@@ -4,8 +4,9 @@
 file mkdir reports
 file mkdir outputs
 
-# Read SVF from DC
-set_svf ../dc/default.svf
+# Note: SVF file not available in this DC version, proceeding without it
+# If SVF becomes available, uncomment the following line:
+# set_svf ../netlists/fft.svf
 
 # Read standard cell library for implementation design
 read_db ../libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db
