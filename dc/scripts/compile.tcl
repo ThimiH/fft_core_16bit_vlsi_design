@@ -5,9 +5,9 @@
 
 # ======== Directory Configuration ========
 set project_root   "../"
-set log_dir        "${project_root}/logs"
-set netlist_dir    "${project_root}/netlist"
-set report_dir     "${project_root}/reports"
+set log_dir        "${project_root}/dc/logs"
+set netlist_dir    "${project_root}/netlists"
+set report_dir     "${project_root}/dc/reports"
 
 # Create directories if they don't exist
 file mkdir $log_dir
@@ -19,7 +19,7 @@ file mkdir $report_dir
 # Set library
 set target_library [list ../libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db]
 set link_library [list * $target_library]
-set synthetic_library [list dw_foundation.sldb]
+# set synthetic_library [list dw_foundation.sldb]
 
 # Read Verilog files (Update file list as needed)
 read_verilog {
@@ -60,11 +60,11 @@ report_area > reports/area.rpt
 report_port -verbose > reports/ports.rpt
 
 # Write synthesized netlist
-write -format verilog -hierarchy -output ../netlist/fft_netlist.v
+write -format verilog -hierarchy -output ../netlists/fft_netlist.v
 
 # Save DC session info for Formality
-write_sdf -version 2.1 ../netlist/fft.sdf
-write_svf -output ../netlist/fft.svf
+write_sdf -version 2.1 ../netlists/fft.sdf
+write_svf -output ../netlists/fft.svf
 
 # # Exit
 # exit
