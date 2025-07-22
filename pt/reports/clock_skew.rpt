@@ -1,0 +1,18 @@
+****************************************
+Report : clock_skew
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:55:44 2025
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock
+-----------------------------------------------------------------------------------------------
+MYCLK            0.00      0.00      0.00      0.00      0.20          1.00           -- 
+
+              Min Rise  Min Fall  Max Rise  Max Fall
+Object          Transition   Transition   Transition   Transition
+--------------------------------------------------------------------------------
+MYCLK            0.10      0.10      0.10      0.10
+
+1

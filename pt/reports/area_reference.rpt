@@ -1,0 +1,195 @@
+****************************************
+Report : reference
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:58:04 2025
+****************************************
+
+
+Attributes:
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    A - abstracted timing model
+    E - extracted timing model
+    S - Stamp timing model
+    Q - Quick timing model (QTM)
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+--------------------------------------------------------------------------------
+mem_32x16                        22467.80    1        22467.80     h
+sky130_fd_sc_hd__a211oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     68        510.49      
+sky130_fd_sc_hd__a21boi_0
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     3          22.52      
+sky130_fd_sc_hd__a21boi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     2          15.01      
+sky130_fd_sc_hd__a21o_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     6          45.04      
+sky130_fd_sc_hd__a21oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    5.00     127       635.61      
+sky130_fd_sc_hd__a221o_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   10.01     2          20.02      
+sky130_fd_sc_hd__a221oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     69        604.33      
+sky130_fd_sc_hd__a22o_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     95        832.05      
+sky130_fd_sc_hd__a22oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     13         97.59      
+sky130_fd_sc_hd__a2bb2oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__a31o_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__a31oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     8          50.05      
+sky130_fd_sc_hd__a32o_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   10.01     1          10.01      
+sky130_fd_sc_hd__a32oi_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__and2_0
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     31        193.94      
+sky130_fd_sc_hd__and3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     1           6.26      
+sky130_fd_sc_hd__buf_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    5.00     1           5.00      
+sky130_fd_sc_hd__clkinv_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    3.75     524      1966.89      
+sky130_fd_sc_hd__dfxtp_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   20.02     457      9148.77      n
+sky130_fd_sc_hd__dfxtp_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   21.27     3          63.81      n
+sky130_fd_sc_hd__dfxtp_4
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   23.77     1          23.77      n
+sky130_fd_sc_hd__fa_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   20.02     350      7006.72      
+sky130_fd_sc_hd__fa_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   22.52     10        225.22      
+sky130_fd_sc_hd__fah_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   33.78     67       2263.42      
+sky130_fd_sc_hd__ha_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   12.51     25        312.80      
+sky130_fd_sc_hd__inv_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    3.75     2           7.51      
+sky130_fd_sc_hd__inv_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    3.75     45        168.91      
+sky130_fd_sc_hd__inv_6
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__maj3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   10.01     96        960.92      
+sky130_fd_sc_hd__nand2_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    3.75     420      1576.51      
+sky130_fd_sc_hd__nand2b_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     30        187.68      
+sky130_fd_sc_hd__nand3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    5.00     20        100.10      
+sky130_fd_sc_hd__nand4_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     1           6.26      
+sky130_fd_sc_hd__nor2_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    3.75     392      1471.41      
+sky130_fd_sc_hd__nor2b_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     11         68.82      
+sky130_fd_sc_hd__nor3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    5.00     24        120.12      
+sky130_fd_sc_hd__nor3_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   10.01     2          20.02      
+sky130_fd_sc_hd__nor3b_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     2          15.01      
+sky130_fd_sc_hd__nor4_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     1           6.26      
+sky130_fd_sc_hd__o211a_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   10.01     16        160.15      
+sky130_fd_sc_hd__o211ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     34        255.24      
+sky130_fd_sc_hd__o21a_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     16        120.12      
+sky130_fd_sc_hd__o21ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    5.00     113       565.54      
+sky130_fd_sc_hd__o21ai_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__o21bai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     1           7.51      
+sky130_fd_sc_hd__o221ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     6          52.55      
+sky130_fd_sc_hd__o22a_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     4          35.03      
+sky130_fd_sc_hd__o22ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     161      1007.22      
+sky130_fd_sc_hd__o2bb2ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     18        157.65      
+sky130_fd_sc_hd__o31a_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     1           8.76      
+sky130_fd_sc_hd__o31ai_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    7.51     10         75.07      
+sky130_fd_sc_hd__or2_0
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     8          50.05      
+sky130_fd_sc_hd__or2_2
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     3          18.77      
+sky130_fd_sc_hd__or3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    6.26     1           6.26      
+sky130_fd_sc_hd__xnor2_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     180      1576.51      
+sky130_fd_sc_hd__xnor3_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                   22.52     1          22.52      
+sky130_fd_sc_hd__xor2_1
+                   sky130_fd_sc_hd__tt_025C_1v80
+                                    8.76     146      1278.73      
+--------------------------------------------------------------------------------
+Total 58 references                                   56678.11
+1

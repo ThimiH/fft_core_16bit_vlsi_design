@@ -1,0 +1,86 @@
+****************************************
+Report : qor
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:55:44 2025
+****************************************
+
+  Timing Path Group 'input_paths' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                    2.69
+  Critical Path Slack:                     6.22
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'output_paths' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.31
+  Critical Path Slack:                     6.69
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'reg_to_reg' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           32
+  Critical Path Length:                    8.89
+  Critical Path Slack:                     0.00
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'input_paths' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.20
+  Critical Path Slack:                     0.03
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'output_paths' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.29
+  Critical Path Slack:                     0.19
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'reg_to_reg' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                    0.31
+  Critical Path Slack:                     0.13
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:                   0.00
+  Total cell area:                     56678.45
+  Design Area:                         56678.45
+  Area Cost:                           -5678.45
+  ---------------------------------------------
+
+
+  Cell & Pin Count
+  ---------------------------------------------
+  Pin Count:                              22836
+  Hierarchical Cell Count:                    1
+  Hierarchical Port Count:                  147
+  Leaf Cell Count:                         6089
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:            22836
+  Total DRC Cost:                          0.00
+  ---------------------------------------------
+
+1
