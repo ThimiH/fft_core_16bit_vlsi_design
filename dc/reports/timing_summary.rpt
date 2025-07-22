@@ -10,17 +10,787 @@ Report : timing
         -transition_time
 Design : fft_top
 Version: V-2023.12
-Date   : Tue Jul 22 15:28:47 2025
+Date   : Tue Jul 22 16:02:07 2025
 ****************************************
 
 Operating Conditions: tt_025C_1v80   Library: sky130_fd_sc_hd__tt_025C_1v80
 Wire Load Model Mode: top
 
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[0]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3155/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3155/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n64 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[0]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[1]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3154/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3154/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n63 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[1]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[1]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[2]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3153/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3153/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n62 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[2]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[2]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[3]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3152/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3152/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n61 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[3]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[3]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[4]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3151/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3151/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n60 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[4]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[4]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[5]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3150/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3150/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n59 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[5]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[5]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[6]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3149/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3149/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n58 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[6]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[6]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[7]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3148/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3148/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n57 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[7]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[7]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[8]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3147/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3147/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n56 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[8]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[8]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: in_push (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[9]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              1.50       1.50 r
+  in_push (in)                                            0.00      0.00       1.50 r
+  in_push (net)                                 1                   0.00       1.50 r
+  U435/B_N (sky130_fd_sc_hd__nor2b_1)                     0.00      0.00       1.50 r
+  U435/Y (sky130_fd_sc_hd__nor2b_1)                       0.21      0.19       1.69 r
+  n2279 (net)                                   4                   0.00       1.69 r
+  U594/A (sky130_fd_sc_hd__nand2_1)                       0.21      0.00       1.69 r
+  U594/Y (sky130_fd_sc_hd__nand2_1)                       0.08      0.10       1.80 f
+  n2272 (net)                                   3                   0.00       1.80 f
+  U3092/A1 (sky130_fd_sc_hd__a21o_1)                      0.08      0.00       1.80 f
+  U3092/X (sky130_fd_sc_hd__a21o_1)                       0.07      0.20       1.99 f
+  n2296 (net)                                   5                   0.00       1.99 f
+  U436/B (sky130_fd_sc_hd__or2_2)                         0.07      0.00       1.99 f
+  U436/X (sky130_fd_sc_hd__or2_2)                         0.20      0.45       2.44 f
+  n2297 (net)                                  32                   0.00       2.44 f
+  U3146/B2 (sky130_fd_sc_hd__a22o_1)                      0.20      0.00       2.44 f
+  U3146/X (sky130_fd_sc_hd__a22o_1)                       0.04      0.25       2.69 f
+  n55 (net)                                     1                   0.00       2.69 f
+  fft_ctrl_sm_0/write_data_1_F_reg[9]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       2.69 f
+  data arrival time                                                            2.69
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  fft_ctrl_sm_0/write_data_1_F_reg[9]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00       9.00 r
+  library setup time                                               -0.09       8.91
+  data required time                                                           8.91
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.91
+  data arrival time                                                           -2.69
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.22
+
+
+  Startpoint: butterfly_0/Ai_F_reg[9]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[9]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[9]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[9]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[9] (net)                     2                   0.00       0.31 r
+  out_imag_F[9] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[8]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[8]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[8]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[8]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[8] (net)                     2                   0.00       0.31 r
+  out_imag_F[8] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[7]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[7]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[7]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[7]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[7] (net)                     2                   0.00       0.31 r
+  out_imag_F[7] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[6]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[6]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[6]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[6]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[6] (net)                     2                   0.00       0.31 r
+  out_imag_F[6] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[5]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[5]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[5]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[5]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[5] (net)                     2                   0.00       0.31 r
+  out_imag_F[5] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[4]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[4]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[4]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[4]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[4] (net)                     2                   0.00       0.31 r
+  out_imag_F[4] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[3]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[3]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[3]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[3]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[3] (net)                     2                   0.00       0.31 r
+  out_imag_F[3] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[2]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[2]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[2]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[2]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[2] (net)                     2                   0.00       0.31 r
+  out_imag_F[2] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[1]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[1]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[1]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[1]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[1] (net)                     2                   0.00       0.31 r
+  out_imag_F[1] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
+  Startpoint: butterfly_0/Ai_F_reg[0]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: out_imag_F[0]
+            (output port clocked by MYCLK)
+  Path Group: output_paths
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Ai_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Ai_F_reg[0]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.03      0.31       0.31 r
+  butterfly_0/Ai_F[0] (net)                     2                   0.00       0.31 r
+  out_imag_F[0] (out)                                     0.03      0.00       0.31 r
+  data arrival time                                                            0.31
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  output external delay                                            -2.00       7.00
+  data required time                                                           7.00
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.00
+  data arrival time                                                           -0.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  6.69
+
+
   Startpoint: butterfly_0/Bi_F_reg[7]
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Zib_F_reg[27]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -32,26 +802,26 @@ Wire Load Model Mode: top
   butterfly_0/Bi_F_reg[7]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.38      0.56       0.56 r
   butterfly_0/Bi_F[7] (net)                    16                   0.00       0.56 r
-  U404/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
-  U404/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
+  U403/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
+  U403/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
   n2047 (net)                                  14                   0.00       0.92 f
-  U1399/A2 (sky130_fd_sc_hd__o21ai_2)                     0.29      0.00       0.92 f
-  U1399/Y (sky130_fd_sc_hd__o21ai_2)                      0.26      0.33       1.24 r
+  U1404/A2 (sky130_fd_sc_hd__o21ai_2)                     0.29      0.00       0.92 f
+  U1404/Y (sky130_fd_sc_hd__o21ai_2)                      0.26      0.33       1.24 r
   n2095 (net)                                   7                   0.00       1.24 r
-  U1400/A (sky130_fd_sc_hd__inv_2)                        0.26      0.00       1.24 r
-  U1400/Y (sky130_fd_sc_hd__inv_2)                        0.09      0.12       1.36 f
+  U1405/A (sky130_fd_sc_hd__inv_2)                        0.26      0.00       1.24 r
+  U1405/Y (sky130_fd_sc_hd__inv_2)                        0.09      0.12       1.36 f
   n2072 (net)                                  10                   0.00       1.36 f
-  U1675/B (sky130_fd_sc_hd__nor2_1)                       0.09      0.00       1.36 f
-  U1675/Y (sky130_fd_sc_hd__nor2_1)                       0.29      0.25       1.62 r
+  U1677/B (sky130_fd_sc_hd__nor2_1)                       0.09      0.00       1.36 f
+  U1677/Y (sky130_fd_sc_hd__nor2_1)                       0.29      0.25       1.62 r
   n1904 (net)                                   6                   0.00       1.62 r
-  U403/A (sky130_fd_sc_hd__clkinv_1)                      0.29      0.00       1.62 r
-  U403/Y (sky130_fd_sc_hd__clkinv_1)                      0.15      0.20       1.82 f
+  U402/A (sky130_fd_sc_hd__clkinv_1)                      0.29      0.00       1.62 r
+  U402/Y (sky130_fd_sc_hd__clkinv_1)                      0.15      0.20       1.82 f
   n1986 (net)                                   6                   0.00       1.82 f
-  U1676/B (sky130_fd_sc_hd__nor2_1)                       0.15      0.00       1.82 f
-  U1676/Y (sky130_fd_sc_hd__nor2_1)                       0.09      0.12       1.93 r
+  U1678/B (sky130_fd_sc_hd__nor2_1)                       0.15      0.00       1.82 f
+  U1678/Y (sky130_fd_sc_hd__nor2_1)                       0.09      0.12       1.93 r
   n820 (net)                                    1                   0.00       1.93 r
-  U1677/C1 (sky130_fd_sc_hd__a211oi_1)                    0.09      0.00       1.93 r
-  U1677/Y (sky130_fd_sc_hd__a211oi_1)                     0.14      0.07       2.00 f
+  U1679/C1 (sky130_fd_sc_hd__a211oi_1)                    0.09      0.00       1.93 r
+  U1679/Y (sky130_fd_sc_hd__a211oi_1)                     0.14      0.07       2.00 f
   butterfly_0/intadd_45/B[0] (net)              1                   0.00       2.00 f
   butterfly_0/intadd_45/U4/A (sky130_fd_sc_hd__fa_1)      0.14      0.00       2.00 f
   butterfly_0/intadd_45/U4/COUT (sky130_fd_sc_hd__fa_1)
@@ -66,8 +836,8 @@ Wire Load Model Mode: top
   butterfly_0/intadd_44/U2/SUM (sky130_fd_sc_hd__fa_1)
                                                           0.06      0.52       3.42 r
   butterfly_0/intadd_44/SUM[2] (net)            1                   0.00       3.42 r
-  U427/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       3.42 r
-  U427/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       3.50 f
+  U426/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       3.42 r
+  U426/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       3.50 f
   butterfly_0/intadd_0/A[4] (net)               1                   0.00       3.50 f
   U3245/B (sky130_fd_sc_hd__fah_1)                        0.06      0.00       3.50 f
   U3245/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.31       3.81 f
@@ -94,14 +864,14 @@ Wire Load Model Mode: top
   butterfly_0/intadd_0/U14/COUT (sky130_fd_sc_hd__fa_1)
                                                           0.07      0.35       5.50 f
   butterfly_0/intadd_0/n13 (net)                1                   0.00       5.50 f
-  U3239/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.50 f
-  U3239/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       5.73 f
+  U3238/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.50 f
+  U3238/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       5.73 f
   butterfly_0/intadd_0/n12 (net)                1                   0.00       5.73 f
-  U3236/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.73 f
-  U3236/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       5.97 f
+  U3235/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.73 f
+  U3235/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       5.97 f
   butterfly_0/intadd_0/n11 (net)                1                   0.00       5.97 f
-  U3235/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.97 f
-  U3235/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.20 f
+  U3234/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.97 f
+  U3234/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.20 f
   butterfly_0/intadd_0/n10 (net)                1                   0.00       6.20 f
   U3243/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.20 f
   U3243/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.44 f
@@ -133,8 +903,8 @@ Wire Load Model Mode: top
   butterfly_0/intadd_0/U2/COUT (sky130_fd_sc_hd__fa_1)
                                                           0.08      0.38       8.77 f
   butterfly_0/intadd_0/n1 (net)                 1                   0.00       8.77 f
-  U3031/B (sky130_fd_sc_hd__xnor2_1)                      0.08      0.00       8.77 f
-  U3031/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.13       8.89 f
+  U3032/B (sky130_fd_sc_hd__xnor2_1)                      0.08      0.00       8.77 f
+  U3032/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.13       8.89 f
   butterfly_0/N115 (net)                        1                   0.00       8.89 f
   butterfly_0/Zib_F_reg[27]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.04      0.00       8.89 f
@@ -157,7 +927,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Yi_full_F_reg[28]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -169,98 +939,98 @@ Wire Load Model Mode: top
   butterfly_0/Zib_F_reg[0]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.03      0.31       0.31 f
   butterfly_0/Zib_F[0] (net)                    1                   0.00       0.31 f
-  U1200/A (sky130_fd_sc_hd__ha_1)                         0.03      0.00       0.31 f
-  U1200/COUT (sky130_fd_sc_hd__ha_1)                      0.05      0.19       0.51 f
-  n419 (net)                                    1                   0.00       0.51 f
-  U376/CIN (sky130_fd_sc_hd__fa_2)                        0.05      0.00       0.51 f
-  U376/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.33       0.84 f
-  n423 (net)                                    1                   0.00       0.84 f
-  U378/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       0.84 f
-  U378/SUM (sky130_fd_sc_hd__fa_1)                        0.06      0.48       1.32 r
-  n424 (net)                                    1                   0.00       1.32 r
-  U606/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       1.32 r
-  U606/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.06       1.38 f
-  n425 (net)                                    1                   0.00       1.38 f
-  U1202/B (sky130_fd_sc_hd__ha_1)                         0.03      0.00       1.38 f
-  U1202/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.17       1.55 f
-  n429 (net)                                    1                   0.00       1.55 f
-  U1204/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.55 f
-  U1204/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.73 f
-  n432 (net)                                    1                   0.00       1.73 f
-  U1206/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.73 f
-  U1206/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.92 f
-  n435 (net)                                    1                   0.00       1.92 f
-  U1208/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.92 f
-  U1208/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.11 f
-  n438 (net)                                    1                   0.00       2.11 f
-  U1210/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.11 f
-  U1210/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.30 f
-  n441 (net)                                    1                   0.00       2.30 f
-  U1212/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.30 f
-  U1212/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.49 f
-  n444 (net)                                    1                   0.00       2.49 f
-  U1214/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.49 f
-  U1214/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.68 f
-  n448 (net)                                    1                   0.00       2.68 f
-  U1215/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.68 f
-  U1215/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.87 f
-  n451 (net)                                    1                   0.00       2.87 f
-  U1217/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.87 f
-  U1217/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       3.06 f
-  n454 (net)                                    1                   0.00       3.06 f
-  U1219/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       3.06 f
-  U1219/COUT (sky130_fd_sc_hd__ha_1)                      0.06      0.21       3.26 f
-  n457 (net)                                    1                   0.00       3.26 f
-  U1220/B (sky130_fd_sc_hd__fa_1)                         0.06      0.00       3.26 f
-  U1220/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       3.66 f
-  n459 (net)                                    1                   0.00       3.66 f
-  U1007/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.66 f
-  U1007/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.04 f
+  U1205/A (sky130_fd_sc_hd__ha_1)                         0.03      0.00       0.31 f
+  U1205/COUT (sky130_fd_sc_hd__ha_1)                      0.05      0.19       0.51 f
+  n418 (net)                                    1                   0.00       0.51 f
+  U375/CIN (sky130_fd_sc_hd__fa_2)                        0.05      0.00       0.51 f
+  U375/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.33       0.84 f
+  n422 (net)                                    1                   0.00       0.84 f
+  U377/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       0.84 f
+  U377/SUM (sky130_fd_sc_hd__fa_1)                        0.06      0.48       1.32 r
+  n423 (net)                                    1                   0.00       1.32 r
+  U608/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       1.32 r
+  U608/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.06       1.38 f
+  n424 (net)                                    1                   0.00       1.38 f
+  U1207/B (sky130_fd_sc_hd__ha_1)                         0.03      0.00       1.38 f
+  U1207/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.17       1.55 f
+  n428 (net)                                    1                   0.00       1.55 f
+  U1209/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.55 f
+  U1209/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.73 f
+  n431 (net)                                    1                   0.00       1.73 f
+  U1211/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.73 f
+  U1211/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.92 f
+  n434 (net)                                    1                   0.00       1.92 f
+  U1213/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.92 f
+  U1213/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.11 f
+  n437 (net)                                    1                   0.00       2.11 f
+  U1215/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.11 f
+  U1215/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.30 f
+  n440 (net)                                    1                   0.00       2.30 f
+  U1217/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.30 f
+  U1217/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.49 f
+  n443 (net)                                    1                   0.00       2.49 f
+  U1219/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.49 f
+  U1219/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.68 f
+  n447 (net)                                    1                   0.00       2.68 f
+  U1220/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.68 f
+  U1220/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.87 f
+  n450 (net)                                    1                   0.00       2.87 f
+  U1222/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.87 f
+  U1222/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       3.06 f
+  n453 (net)                                    1                   0.00       3.06 f
+  U1224/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       3.06 f
+  U1224/COUT (sky130_fd_sc_hd__ha_1)                      0.06      0.21       3.26 f
+  n456 (net)                                    1                   0.00       3.26 f
+  U1225/B (sky130_fd_sc_hd__fa_1)                         0.06      0.00       3.26 f
+  U1225/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       3.66 f
+  n458 (net)                                    1                   0.00       3.66 f
+  U1013/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.66 f
+  U1013/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.04 f
   n621 (net)                                    1                   0.00       4.04 f
-  U1347/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.04 f
-  U1347/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       4.40 f
+  U1352/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.04 f
+  U1352/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       4.40 f
   n461 (net)                                    1                   0.00       4.40 f
-  U1221/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       4.40 f
-  U1221/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       4.65 f
+  U1226/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       4.40 f
+  U1226/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       4.65 f
   n619 (net)                                    1                   0.00       4.65 f
-  U1346/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       4.65 f
-  U1346/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.01 f
-  n465 (net)                                    1                   0.00       5.01 f
-  U1222/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.01 f
-  U1222/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.26 f
+  U1351/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       4.65 f
+  U1351/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.01 f
+  n466 (net)                                    1                   0.00       5.01 f
+  U1227/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.01 f
+  U1227/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.26 f
   n631 (net)                                    1                   0.00       5.26 f
-  U1352/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.26 f
-  U1352/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.62 f
-  n469 (net)                                    1                   0.00       5.62 f
-  U1224/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.62 f
-  U1224/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.87 f
+  U1357/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.26 f
+  U1357/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.62 f
+  n472 (net)                                    1                   0.00       5.62 f
+  U1230/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.62 f
+  U1230/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.87 f
   n664 (net)                                    1                   0.00       5.87 f
-  U1364/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.87 f
-  U1364/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.23 f
-  n467 (net)                                    1                   0.00       6.23 f
-  U1223/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.23 f
-  U1223/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.48 f
+  U1369/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.87 f
+  U1369/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.23 f
+  n470 (net)                                    1                   0.00       6.23 f
+  U1229/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.23 f
+  U1229/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.48 f
   n660 (net)                                    1                   0.00       6.48 f
-  U1362/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       6.48 f
-  U1362/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.84 f
-  n472 (net)                                    1                   0.00       6.84 f
-  U1225/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.84 f
-  U1225/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.09 f
+  U1367/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       6.48 f
+  U1367/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.84 f
+  n468 (net)                                    1                   0.00       6.84 f
+  U1228/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.84 f
+  U1228/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.09 f
   n656 (net)                                    1                   0.00       7.09 f
-  U1360/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.09 f
-  U1360/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       7.45 f
+  U1365/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.09 f
+  U1365/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       7.45 f
   n642 (net)                                    1                   0.00       7.45 f
-  U1356/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.45 f
-  U1356/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.70 f
+  U1361/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.45 f
+  U1361/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.70 f
   n654 (net)                                    1                   0.00       7.70 f
-  U1359/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.70 f
-  U1359/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       8.08 f
+  U1364/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.70 f
+  U1364/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       8.08 f
   n645 (net)                                    1                   0.00       8.08 f
-  U438/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       8.08 f
-  U438/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       8.46 f
+  U439/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       8.08 f
+  U439/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       8.46 f
   n647 (net)                                    1                   0.00       8.46 f
-  U1006/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       8.46 f
-  U1006/SUM (sky130_fd_sc_hd__fa_1)                       0.07      0.42       8.88 f
+  U1012/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       8.46 f
+  U1012/SUM (sky130_fd_sc_hd__fa_1)                       0.07      0.42       8.88 f
   butterfly_0/N240 (net)                        1                   0.00       8.88 f
   butterfly_0/Yi_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.07      0.00       8.88 f
@@ -283,7 +1053,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Zia_F_reg[27]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -295,35 +1065,35 @@ Wire Load Model Mode: top
   butterfly_0/Br_F_reg[5]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.32      0.52       0.52 r
   butterfly_0/Br_F[5] (net)                    13                   0.00       0.52 r
-  U442/A (sky130_fd_sc_hd__inv_2)                         0.32      0.00       0.52 r
-  U442/Y (sky130_fd_sc_hd__inv_2)                         0.14      0.18       0.70 f
+  U443/A (sky130_fd_sc_hd__inv_2)                         0.32      0.00       0.52 r
+  U443/Y (sky130_fd_sc_hd__inv_2)                         0.14      0.18       0.70 f
   n1064 (net)                                  17                   0.00       0.70 f
-  U1068/A2 (sky130_fd_sc_hd__a21oi_1)                     0.14      0.00       0.70 f
-  U1068/Y (sky130_fd_sc_hd__a21oi_1)                      0.50      0.46       1.16 r
+  U1074/A2 (sky130_fd_sc_hd__a21oi_1)                     0.14      0.00       0.70 f
+  U1074/Y (sky130_fd_sc_hd__a21oi_1)                      0.50      0.46       1.16 r
   n276 (net)                                    9                   0.00       1.16 r
-  U1069/A (sky130_fd_sc_hd__inv_2)                        0.50      0.00       1.16 r
-  U1069/Y (sky130_fd_sc_hd__inv_2)                        0.12      0.12       1.28 f
+  U1075/A (sky130_fd_sc_hd__inv_2)                        0.50      0.00       1.16 r
+  U1075/Y (sky130_fd_sc_hd__inv_2)                        0.12      0.12       1.28 f
   n1484 (net)                                   7                   0.00       1.28 f
-  U1097/C1 (sky130_fd_sc_hd__a221oi_1)                    0.12      0.00       1.28 f
-  U1097/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.29       1.57 r
+  U1102/C1 (sky130_fd_sc_hd__a221oi_1)                    0.12      0.00       1.28 f
+  U1102/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.29       1.57 r
   n821 (net)                                    2                   0.00       1.57 r
-  U393/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.57 r
-  U393/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.79 f
+  U392/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.57 r
+  U392/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.79 f
   n1505 (net)                                   7                   0.00       1.79 f
-  U1098/B (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.79 f
-  U1098/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.15       1.94 r
-  n1674 (net)                                   2                   0.00       1.94 r
-  U1099/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.94 r
-  U1099/Y (sky130_fd_sc_hd__nor2_1)                       0.06      0.08       2.03 f
+  U1103/B (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.79 f
+  U1103/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.15       1.94 r
+  n1673 (net)                                   2                   0.00       1.94 r
+  U1104/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.94 r
+  U1104/Y (sky130_fd_sc_hd__nor2_1)                       0.06      0.08       2.03 f
   n697 (net)                                    3                   0.00       2.03 f
-  U1100/B (sky130_fd_sc_hd__xor2_1)                       0.06      0.00       2.03 f
-  U1100/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.15       2.18 f
+  U1105/B (sky130_fd_sc_hd__xor2_1)                       0.06      0.00       2.03 f
+  U1105/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.15       2.18 f
   n288 (net)                                    1                   0.00       2.18 f
-  U1109/A (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.18 f
-  U1109/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.19       2.36 f
+  U1114/A (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.18 f
+  U1114/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.19       2.36 f
   n691 (net)                                    2                   0.00       2.36 f
-  U1110/B (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.36 f
-  U1110/X (sky130_fd_sc_hd__xor2_1)                       0.09      0.16       2.53 f
+  U1115/B (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.36 f
+  U1115/X (sky130_fd_sc_hd__xor2_1)                       0.09      0.16       2.53 f
   butterfly_0/intadd_1/A[1] (net)               1                   0.00       2.53 f
   U3210/B (sky130_fd_sc_hd__fa_1)                         0.09      0.00       2.53 f
   U3210/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.39       2.91 f
@@ -331,17 +1101,17 @@ Wire Load Model Mode: top
   U3204/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       2.91 f
   U3204/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       3.17 f
   butterfly_0/intadd_1/n21 (net)                1                   0.00       3.17 f
-  butterfly_0/intadd_1/U21/CIN (sky130_fd_sc_hd__fa_2)
+  butterfly_0/intadd_1/U21/CIN (sky130_fd_sc_hd__fa_1)
                                                           0.07      0.00       3.17 f
-  butterfly_0/intadd_1/U21/COUT (sky130_fd_sc_hd__fa_2)
-                                                          0.07      0.34       3.51 f
-  butterfly_0/intadd_1/n20 (net)                1                   0.00       3.51 f
-  butterfly_0/intadd_1/U20/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.00       3.51 f
-  butterfly_0/intadd_1/U20/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.37       3.88 f
-  butterfly_0/intadd_1/n19 (net)                1                   0.00       3.88 f
-  U3214/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.88 f
+  butterfly_0/intadd_1/U21/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.38       3.55 f
+  butterfly_0/intadd_1/n20 (net)                1                   0.00       3.55 f
+  butterfly_0/intadd_1/U20/CIN (sky130_fd_sc_hd__fa_2)
+                                                          0.08      0.00       3.55 f
+  butterfly_0/intadd_1/U20/COUT (sky130_fd_sc_hd__fa_2)
+                                                          0.07      0.34       3.89 f
+  butterfly_0/intadd_1/n19 (net)                1                   0.00       3.89 f
+  U3214/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       3.89 f
   U3214/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.27 f
   butterfly_0/intadd_1/n18 (net)                1                   0.00       4.27 f
   U3198/CIN (sky130_fd_sc_hd__fa_2)                       0.08      0.00       4.27 f
@@ -371,49 +1141,49 @@ Wire Load Model Mode: top
   U3205/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.15 f
   butterfly_0/intadd_1/n12 (net)                1                   0.00       6.15 f
   U3199/CIN (sky130_fd_sc_hd__fa_2)                       0.07      0.00       6.15 f
-  U3199/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       6.47 f
-  butterfly_0/intadd_1/n11 (net)                1                   0.00       6.47 f
-  U3206/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.47 f
+  U3199/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       6.48 f
+  butterfly_0/intadd_1/n11 (net)                1                   0.00       6.48 f
+  U3206/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.48 f
   U3206/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.73 f
   butterfly_0/intadd_1/n10 (net)                1                   0.00       6.73 f
   U3200/CIN (sky130_fd_sc_hd__fa_2)                       0.07      0.00       6.73 f
-  U3200/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       7.05 f
-  butterfly_0/intadd_1/n9 (net)                 1                   0.00       7.05 f
-  U3207/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.05 f
+  U3200/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       7.06 f
+  butterfly_0/intadd_1/n9 (net)                 1                   0.00       7.06 f
+  U3207/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.06 f
   U3207/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       7.29 f
   butterfly_0/intadd_1/n8 (net)                 1                   0.00       7.29 f
-  U468/CI (sky130_fd_sc_hd__fah_1)                        0.06      0.00       7.29 f
-  U468/COUT (sky130_fd_sc_hd__fah_1)                      0.06      0.23       7.52 f
+  U467/CI (sky130_fd_sc_hd__fah_1)                        0.06      0.00       7.29 f
+  U467/COUT (sky130_fd_sc_hd__fah_1)                      0.06      0.23       7.52 f
   butterfly_0/intadd_1/n7 (net)                 1                   0.00       7.52 f
   U3219/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.52 f
   U3219/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.27       7.79 f
   butterfly_0/intadd_1/n6 (net)                 2                   0.00       7.79 f
-  U1322/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       7.79 f
-  U1322/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       7.87 r
+  U1327/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       7.79 f
+  U1327/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       7.87 r
   n564 (net)                                    1                   0.00       7.87 r
-  U1324/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       7.87 r
-  U1324/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       7.92 f
+  U1329/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       7.87 r
+  U1329/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       7.92 f
   butterfly_0/intadd_1/n5 (net)                 1                   0.00       7.92 f
   U3220/CI (sky130_fd_sc_hd__fah_1)                       0.04      0.00       7.92 f
   U3220/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.25       8.17 f
   butterfly_0/intadd_1/n4 (net)                 1                   0.00       8.17 f
-  U456/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       8.17 f
-  U456/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.35       8.51 f
+  U455/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       8.17 f
+  U455/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.35       8.51 f
   butterfly_0/intadd_1/n3 (net)                 2                   0.00       8.51 f
-  U1057/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.51 f
-  U1057/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.59 r
+  U1063/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.51 f
+  U1063/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.59 r
   n271 (net)                                    1                   0.00       8.59 r
-  U1059/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.59 r
-  U1059/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       8.67 f
+  U1065/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.59 r
+  U1065/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       8.67 f
   n1764 (net)                                   2                   0.00       8.67 f
-  U2637/A (sky130_fd_sc_hd__nand2_1)                      0.06      0.00       8.67 f
-  U2637/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       8.73 r
+  U2638/A (sky130_fd_sc_hd__nand2_1)                      0.06      0.00       8.67 f
+  U2638/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       8.73 r
   n1768 (net)                                   1                   0.00       8.73 r
-  U2639/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       8.73 r
-  U2639/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       8.78 f
+  U2640/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       8.73 r
+  U2640/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       8.78 f
   n1769 (net)                                   1                   0.00       8.78 f
-  U2640/B (sky130_fd_sc_hd__xnor2_1)                      0.04      0.00       8.78 f
-  U2640/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.11       8.89 f
+  U2641/B (sky130_fd_sc_hd__xnor2_1)                      0.04      0.00       8.78 f
+  U2641/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.11       8.89 f
   butterfly_0/N87 (net)                         1                   0.00       8.89 f
   butterfly_0/Zia_F_reg[27]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.04      0.00       8.89 f
@@ -429,14 +1199,180 @@ Wire Load Model Mode: top
   data required time                                                           8.90
   data arrival time                                                           -8.89
   ------------------------------------------------------------------------------------
-  slack (MET)                                                                  0.02
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: butterfly_0/Wi_F_reg[9]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: butterfly_0/Zra_F_reg[27]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: reg_to_reg
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  butterfly_0/Wi_F_reg[9]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.10      0.00       0.00 r
+  butterfly_0/Wi_F_reg[9]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          1.24      1.16       1.16 r
+  butterfly_0/Wi_F[9] (net)                    50                   0.00       1.16 r
+  U946/A (sky130_fd_sc_hd__inv_6)                         1.24      0.00       1.16 r
+  U946/Y (sky130_fd_sc_hd__inv_6)                         0.23      0.16       1.32 f
+  n2205 (net)                                  25                   0.00       1.32 f
+  U2058/A (sky130_fd_sc_hd__nor2_1)                       0.23      0.00       1.32 f
+  U2058/Y (sky130_fd_sc_hd__nor2_1)                       0.10      0.15       1.47 r
+  n1138 (net)                                   1                   0.00       1.47 r
+  U2059/B1 (sky130_fd_sc_hd__a21oi_1)                     0.10      0.00       1.47 r
+  U2059/Y (sky130_fd_sc_hd__a21oi_1)                      0.07      0.06       1.53 f
+  n1662 (net)                                   2                   0.00       1.53 f
+  U2061/B1 (sky130_fd_sc_hd__o211ai_1)                    0.07      0.00       1.53 f
+  U2061/Y (sky130_fd_sc_hd__o211ai_1)                     0.19      0.11       1.64 r
+  n1141 (net)                                   2                   0.00       1.64 r
+  U2062/A (sky130_fd_sc_hd__nand2_1)                      0.19      0.00       1.64 r
+  U2062/Y (sky130_fd_sc_hd__nand2_1)                      0.09      0.12       1.76 f
+  butterfly_0/intadd_34/B[1] (net)              2                   0.00       1.76 f
+  U2063/B1 (sky130_fd_sc_hd__o21ai_1)                     0.09      0.00       1.76 f
+  U2063/Y (sky130_fd_sc_hd__o21ai_1)                      0.16      0.12       1.88 r
+  butterfly_0/intadd_34/A[0] (net)              1                   0.00       1.88 r
+  butterfly_0/intadd_34/U5/B (sky130_fd_sc_hd__fa_1)      0.16      0.00       1.88 r
+  butterfly_0/intadd_34/U5/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.20       2.08 r
+  butterfly_0/intadd_34/n4 (net)                1                   0.00       2.08 r
+  butterfly_0/intadd_34/U4/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.00       2.08 r
+  butterfly_0/intadd_34/U4/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.17       2.26 r
+  butterfly_0/intadd_34/n3 (net)                1                   0.00       2.26 r
+  butterfly_0/intadd_34/U3/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.00       2.26 r
+  butterfly_0/intadd_34/U3/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.17       2.43 r
+  butterfly_0/intadd_34/n2 (net)                1                   0.00       2.43 r
+  butterfly_0/intadd_34/U2/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.00       2.43 r
+  butterfly_0/intadd_34/U2/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.06      0.16       2.59 r
+  butterfly_0/intadd_34/n1 (net)                1                   0.00       2.59 r
+  U534/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       2.59 r
+  U534/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       2.67 f
+  butterfly_0/intadd_3/B[1] (net)               1                   0.00       2.67 f
+  butterfly_0/intadd_3/U23/A (sky130_fd_sc_hd__fa_1)      0.06      0.00       2.67 f
+  butterfly_0/intadd_3/U23/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.43       3.09 f
+  butterfly_0/intadd_3/n22 (net)                1                   0.00       3.09 f
+  butterfly_0/intadd_3/U22/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.00       3.09 f
+  butterfly_0/intadd_3/U22/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.38       3.47 f
+  butterfly_0/intadd_3/n21 (net)                1                   0.00       3.47 f
+  U479/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.47 f
+  U479/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       3.85 f
+  butterfly_0/intadd_3/n20 (net)                1                   0.00       3.85 f
+  U369/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.85 f
+  U369/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.40       4.25 f
+  butterfly_0/intadd_3/n19 (net)                2                   0.00       4.25 f
+  U1195/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       4.25 f
+  U1195/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.07       4.32 r
+  n408 (net)                                    1                   0.00       4.32 r
+  U1197/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       4.32 r
+  U1197/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       4.36 f
+  butterfly_0/intadd_3/n18 (net)                1                   0.00       4.36 f
+  U3241/CI (sky130_fd_sc_hd__fah_1)                       0.03      0.00       4.36 f
+  U3241/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.22       4.58 f
+  butterfly_0/intadd_3/n17 (net)                1                   0.00       4.58 f
+  U3239/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       4.58 f
+  U3239/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.27       4.85 f
+  butterfly_0/intadd_3/n16 (net)                2                   0.00       4.85 f
+  U1190/A (sky130_fd_sc_hd__nand2_1)                      0.08      0.00       4.85 f
+  U1190/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       4.92 r
+  n403 (net)                                    1                   0.00       4.92 r
+  U1192/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       4.92 r
+  U1192/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       4.97 f
+  butterfly_0/intadd_3/n15 (net)                1                   0.00       4.97 f
+  butterfly_0/intadd_3/U15/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.04      0.00       4.97 f
+  butterfly_0/intadd_3/U15/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.37       5.33 f
+  butterfly_0/intadd_3/n14 (net)                1                   0.00       5.33 f
+  butterfly_0/intadd_3/U14/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.00       5.33 f
+  butterfly_0/intadd_3/U14/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.38       5.71 f
+  butterfly_0/intadd_3/n13 (net)                1                   0.00       5.71 f
+  butterfly_0/intadd_3/U13/CIN (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.00       5.71 f
+  butterfly_0/intadd_3/U13/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.38       6.09 f
+  butterfly_0/intadd_3/n12 (net)                1                   0.00       6.09 f
+  U1016/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.09 f
+  U1016/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       6.45 f
+  butterfly_0/intadd_3/n11 (net)                1                   0.00       6.45 f
+  U3233/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.45 f
+  U3233/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.27       6.72 f
+  butterfly_0/intadd_3/n10 (net)                2                   0.00       6.72 f
+  U1200/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       6.72 f
+  U1200/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       6.80 r
+  n413 (net)                                    1                   0.00       6.80 r
+  U1202/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       6.80 r
+  U1202/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       6.85 f
+  butterfly_0/intadd_3/n9 (net)                 1                   0.00       6.85 f
+  U3240/CI (sky130_fd_sc_hd__fah_1)                       0.04      0.00       6.85 f
+  U3240/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.26       7.11 f
+  butterfly_0/intadd_3/n8 (net)                 2                   0.00       7.11 f
+  U657/A (sky130_fd_sc_hd__clkinv_1)                      0.08      0.00       7.11 f
+  U657/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       7.17 r
+  n397 (net)                                    1                   0.00       7.17 r
+  U656/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       7.17 r
+  U656/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.06      0.06       7.22 f
+  butterfly_0/intadd_3/n7 (net)                 1                   0.00       7.22 f
+  butterfly_0/intadd_3/U7/CIN (sky130_fd_sc_hd__fa_1)     0.06      0.00       7.22 f
+  butterfly_0/intadd_3/U7/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.07      0.35       7.57 f
+  butterfly_0/intadd_3/n6 (net)                 1                   0.00       7.57 f
+  U3224/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.57 f
+  U3224/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       7.81 f
+  butterfly_0/intadd_3/n5 (net)                 1                   0.00       7.81 f
+  butterfly_0/intadd_3/U5/CI (sky130_fd_sc_hd__fah_1)     0.06      0.00       7.81 f
+  butterfly_0/intadd_3/U5/COUT (sky130_fd_sc_hd__fah_1)
+                                                          0.06      0.23       8.05 f
+  butterfly_0/intadd_3/n4 (net)                 1                   0.00       8.05 f
+  U3232/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       8.05 f
+  U3232/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       8.28 f
+  butterfly_0/intadd_3/n3 (net)                 1                   0.00       8.28 f
+  butterfly_0/intadd_3/U3/CI (sky130_fd_sc_hd__fah_1)     0.06      0.00       8.28 f
+  butterfly_0/intadd_3/U3/COUT (sky130_fd_sc_hd__fah_1)
+                                                          0.06      0.23       8.52 f
+  butterfly_0/intadd_3/n2 (net)                 1                   0.00       8.52 f
+  U3231/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       8.52 f
+  U3231/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.25       8.77 f
+  butterfly_0/intadd_3/n1 (net)                 1                   0.00       8.77 f
+  U2080/B (sky130_fd_sc_hd__xnor2_1)                      0.07      0.00       8.77 f
+  U2080/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.89 f
+  butterfly_0/N31 (net)                         1                   0.00       8.89 f
+  butterfly_0/Zra_F_reg[27]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.04      0.00       8.89 f
+  data arrival time                                                            8.89
+
+  clock MYCLK (rise edge)                                          10.00      10.00
+  clock network delay (ideal)                                       0.00      10.00
+  clock uncertainty                                                -1.00       9.00
+  butterfly_0/Zra_F_reg[27]/CLK (sky130_fd_sc_hd__dfxtp_1)          0.00       9.00 r
+  library setup time                                               -0.10       8.90
+  data required time                                                           8.90
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.90
+  data arrival time                                                           -8.89
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
 
 
   Startpoint: butterfly_0/Bi_F_reg[7]
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Zrb_F_reg[27]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -448,26 +1384,26 @@ Wire Load Model Mode: top
   butterfly_0/Bi_F_reg[7]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.38      0.56       0.56 r
   butterfly_0/Bi_F[7] (net)                    16                   0.00       0.56 r
-  U404/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
-  U404/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
+  U403/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
+  U403/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
   n2047 (net)                                  14                   0.00       0.92 f
-  U1398/B (sky130_fd_sc_hd__nand2_1)                      0.29      0.00       0.92 f
-  U1398/Y (sky130_fd_sc_hd__nand2_1)                      0.10      0.17       1.09 r
+  U1403/B (sky130_fd_sc_hd__nand2_1)                      0.29      0.00       0.92 f
+  U1403/Y (sky130_fd_sc_hd__nand2_1)                      0.10      0.17       1.09 r
   n677 (net)                                    1                   0.00       1.09 r
-  U1399/B1 (sky130_fd_sc_hd__o21ai_2)                     0.10      0.00       1.09 r
-  U1399/Y (sky130_fd_sc_hd__o21ai_2)                      0.09      0.10       1.19 f
+  U1404/B1 (sky130_fd_sc_hd__o21ai_2)                     0.10      0.00       1.09 r
+  U1404/Y (sky130_fd_sc_hd__o21ai_2)                      0.09      0.10       1.19 f
   n2095 (net)                                   7                   0.00       1.19 f
-  U1401/C1 (sky130_fd_sc_hd__a221oi_1)                    0.09      0.00       1.19 f
-  U1401/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.28       1.47 r
+  U1406/C1 (sky130_fd_sc_hd__a221oi_1)                    0.09      0.00       1.19 f
+  U1406/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.28       1.47 r
   n2002 (net)                                   2                   0.00       1.47 r
-  U392/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.47 r
-  U392/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.69 f
+  U391/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.47 r
+  U391/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.69 f
   n1844 (net)                                   7                   0.00       1.69 f
-  U2289/A (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.69 f
-  U2289/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.17       1.85 r
+  U2290/A (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.69 f
+  U2290/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.17       1.85 r
   n1366 (net)                                   2                   0.00       1.85 r
-  U2335/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.85 r
-  U2335/Y (sky130_fd_sc_hd__nor2_1)                       0.05      0.07       1.93 f
+  U2336/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.85 r
+  U2336/Y (sky130_fd_sc_hd__nor2_1)                       0.05      0.07       1.93 f
   butterfly_0/intadd_59/B[0] (net)              1                   0.00       1.93 f
   butterfly_0/intadd_59/U4/A (sky130_fd_sc_hd__fa_1)      0.05      0.00       1.93 f
   butterfly_0/intadd_59/U4/COUT (sky130_fd_sc_hd__fa_1)
@@ -521,14 +1457,14 @@ Wire Load Model Mode: top
   U3202/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.37 f
   U3202/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.63 f
   butterfly_0/intadd_2/n10 (net)                1                   0.00       6.63 f
-  U473/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       6.63 f
-  U473/COUT (sky130_fd_sc_hd__fa_2)                       0.06      0.32       6.95 f
+  U472/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       6.63 f
+  U472/COUT (sky130_fd_sc_hd__fa_2)                       0.06      0.32       6.95 f
   butterfly_0/intadd_2/n9 (net)                 1                   0.00       6.95 f
   U3203/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.95 f
   U3203/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.21 f
   butterfly_0/intadd_2/n8 (net)                 1                   0.00       7.21 f
-  U467/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       7.21 f
-  U467/COUT (sky130_fd_sc_hd__fa_2)                       0.06      0.32       7.53 f
+  U466/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       7.21 f
+  U466/COUT (sky130_fd_sc_hd__fa_2)                       0.06      0.32       7.53 f
   butterfly_0/intadd_2/n7 (net)                 1                   0.00       7.53 f
   butterfly_0/intadd_2/U7/CI (sky130_fd_sc_hd__fah_1)     0.06      0.00       7.53 f
   butterfly_0/intadd_2/U7/COUT (sky130_fd_sc_hd__fah_1)
@@ -537,27 +1473,27 @@ Wire Load Model Mode: top
   U3218/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.76 f
   U3218/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.27       8.03 f
   butterfly_0/intadd_2/n5 (net)                 2                   0.00       8.03 f
-  U1315/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.03 f
-  U1315/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.11 r
+  U1320/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.03 f
+  U1320/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.11 r
   n556 (net)                                    1                   0.00       8.11 r
-  U1317/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.11 r
-  U1317/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       8.16 f
+  U1322/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.11 r
+  U1322/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       8.16 f
   butterfly_0/intadd_2/n4 (net)                 1                   0.00       8.16 f
   U3221/CI (sky130_fd_sc_hd__fah_1)                       0.04      0.00       8.16 f
   U3221/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.26       8.42 f
   butterfly_0/intadd_2/n3 (net)                 2                   0.00       8.42 f
-  U1310/A (sky130_fd_sc_hd__nand2_1)                      0.08      0.00       8.42 f
-  U1310/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       8.48 r
+  U1315/A (sky130_fd_sc_hd__nand2_1)                      0.08      0.00       8.42 f
+  U1315/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       8.48 r
   n551 (net)                                    1                   0.00       8.48 r
-  U1312/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       8.48 r
-  U1312/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       8.52 f
+  U1317/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       8.48 r
+  U1317/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       8.52 f
   butterfly_0/intadd_2/n2 (net)                 1                   0.00       8.52 f
   butterfly_0/intadd_2/U2/CI (sky130_fd_sc_hd__fah_1)     0.03      0.00       8.52 f
   butterfly_0/intadd_2/U2/COUT (sky130_fd_sc_hd__fah_1)
                                                           0.07      0.24       8.76 f
   butterfly_0/intadd_2/n1 (net)                 1                   0.00       8.76 f
-  U2380/B (sky130_fd_sc_hd__xnor2_1)                      0.07      0.00       8.76 f
-  U2380/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.88 f
+  U2381/B (sky130_fd_sc_hd__xnor2_1)                      0.07      0.00       8.76 f
+  U2381/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.88 f
   butterfly_0/N59 (net)                         1                   0.00       8.88 f
   butterfly_0/Zrb_F_reg[27]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.04      0.00       8.88 f
@@ -576,177 +1512,11 @@ Wire Load Model Mode: top
   slack (MET)                                                                  0.02
 
 
-  Startpoint: butterfly_0/Wi_F_reg[9]
-              (rising edge-triggered flip-flop clocked by MYCLK)
-  Endpoint: butterfly_0/Zra_F_reg[27]
-            (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
-  Path Type: max
-
-  Point                                       Fanout     Trans      Incr       Path
-  ------------------------------------------------------------------------------------
-  clock MYCLK (rise edge)                                           0.00       0.00
-  clock network delay (ideal)                                       0.00       0.00
-  butterfly_0/Wi_F_reg[9]/CLK (sky130_fd_sc_hd__dfxtp_1)
-                                                          0.10      0.00       0.00 r
-  butterfly_0/Wi_F_reg[9]/Q (sky130_fd_sc_hd__dfxtp_1)
-                                                          1.24      1.16       1.16 r
-  butterfly_0/Wi_F[9] (net)                    50                   0.00       1.16 r
-  U939/A (sky130_fd_sc_hd__inv_6)                         1.24      0.00       1.16 r
-  U939/Y (sky130_fd_sc_hd__inv_6)                         0.23      0.16       1.32 f
-  n2205 (net)                                  25                   0.00       1.32 f
-  U2057/A (sky130_fd_sc_hd__nor2_1)                       0.23      0.00       1.32 f
-  U2057/Y (sky130_fd_sc_hd__nor2_1)                       0.10      0.15       1.47 r
-  n1138 (net)                                   1                   0.00       1.47 r
-  U2058/B1 (sky130_fd_sc_hd__a21oi_1)                     0.10      0.00       1.47 r
-  U2058/Y (sky130_fd_sc_hd__a21oi_1)                      0.07      0.06       1.53 f
-  n1663 (net)                                   2                   0.00       1.53 f
-  U2060/B1 (sky130_fd_sc_hd__o211ai_1)                    0.07      0.00       1.53 f
-  U2060/Y (sky130_fd_sc_hd__o211ai_1)                     0.19      0.11       1.64 r
-  n1141 (net)                                   2                   0.00       1.64 r
-  U2061/A (sky130_fd_sc_hd__nand2_1)                      0.19      0.00       1.64 r
-  U2061/Y (sky130_fd_sc_hd__nand2_1)                      0.09      0.12       1.76 f
-  butterfly_0/intadd_34/B[1] (net)              2                   0.00       1.76 f
-  U2062/B1 (sky130_fd_sc_hd__o21ai_1)                     0.09      0.00       1.76 f
-  U2062/Y (sky130_fd_sc_hd__o21ai_1)                      0.16      0.12       1.88 r
-  butterfly_0/intadd_34/A[0] (net)              1                   0.00       1.88 r
-  butterfly_0/intadd_34/U5/B (sky130_fd_sc_hd__fa_1)      0.16      0.00       1.88 r
-  butterfly_0/intadd_34/U5/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.20       2.08 r
-  butterfly_0/intadd_34/n4 (net)                1                   0.00       2.08 r
-  butterfly_0/intadd_34/U4/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.00       2.08 r
-  butterfly_0/intadd_34/U4/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.17       2.26 r
-  butterfly_0/intadd_34/n3 (net)                1                   0.00       2.26 r
-  butterfly_0/intadd_34/U3/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.00       2.26 r
-  butterfly_0/intadd_34/U3/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.17       2.43 r
-  butterfly_0/intadd_34/n2 (net)                1                   0.00       2.43 r
-  butterfly_0/intadd_34/U2/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.00       2.43 r
-  butterfly_0/intadd_34/U2/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.06      0.16       2.59 r
-  butterfly_0/intadd_34/n1 (net)                1                   0.00       2.59 r
-  U534/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       2.59 r
-  U534/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       2.67 f
-  butterfly_0/intadd_3/B[1] (net)               1                   0.00       2.67 f
-  butterfly_0/intadd_3/U23/A (sky130_fd_sc_hd__fa_1)      0.06      0.00       2.67 f
-  butterfly_0/intadd_3/U23/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.43       3.09 f
-  butterfly_0/intadd_3/n22 (net)                1                   0.00       3.09 f
-  butterfly_0/intadd_3/U22/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.00       3.09 f
-  butterfly_0/intadd_3/U22/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.36       3.45 f
-  butterfly_0/intadd_3/n21 (net)                1                   0.00       3.45 f
-  U3232/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       3.45 f
-  U3232/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       3.71 f
-  butterfly_0/intadd_3/n20 (net)                1                   0.00       3.71 f
-  U369/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       3.71 f
-  U369/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.39       4.10 f
-  butterfly_0/intadd_3/n19 (net)                2                   0.00       4.10 f
-  U1190/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       4.10 f
-  U1190/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.07       4.17 r
-  n408 (net)                                    1                   0.00       4.17 r
-  U1192/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       4.17 r
-  U1192/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       4.22 f
-  butterfly_0/intadd_3/n18 (net)                1                   0.00       4.22 f
-  U366/CIN (sky130_fd_sc_hd__fa_1)                        0.04      0.00       4.22 f
-  U366/COUT (sky130_fd_sc_hd__fa_1)                       0.07      0.35       4.57 f
-  butterfly_0/intadd_3/n17 (net)                1                   0.00       4.57 f
-  U3240/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       4.57 f
-  U3240/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.27       4.84 f
-  butterfly_0/intadd_3/n16 (net)                2                   0.00       4.84 f
-  U1185/A (sky130_fd_sc_hd__nand2_1)                      0.08      0.00       4.84 f
-  U1185/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       4.91 r
-  n403 (net)                                    1                   0.00       4.91 r
-  U1187/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       4.91 r
-  U1187/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       4.96 f
-  butterfly_0/intadd_3/n15 (net)                1                   0.00       4.96 f
-  butterfly_0/intadd_3/U15/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.04      0.00       4.96 f
-  butterfly_0/intadd_3/U15/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.37       5.32 f
-  butterfly_0/intadd_3/n14 (net)                1                   0.00       5.32 f
-  butterfly_0/intadd_3/U14/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.00       5.32 f
-  butterfly_0/intadd_3/U14/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.38       5.70 f
-  butterfly_0/intadd_3/n13 (net)                1                   0.00       5.70 f
-  butterfly_0/intadd_3/U13/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.00       5.70 f
-  butterfly_0/intadd_3/U13/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.38       6.08 f
-  butterfly_0/intadd_3/n12 (net)                1                   0.00       6.08 f
-  U1010/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.08 f
-  U1010/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       6.44 f
-  butterfly_0/intadd_3/n11 (net)                1                   0.00       6.44 f
-  U3234/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.44 f
-  U3234/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.27       6.71 f
-  butterfly_0/intadd_3/n10 (net)                2                   0.00       6.71 f
-  U1195/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       6.71 f
-  U1195/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       6.79 r
-  n413 (net)                                    1                   0.00       6.79 r
-  U1197/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       6.79 r
-  U1197/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       6.84 f
-  butterfly_0/intadd_3/n9 (net)                 1                   0.00       6.84 f
-  U3241/CI (sky130_fd_sc_hd__fah_1)                       0.04      0.00       6.84 f
-  U3241/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.26       7.10 f
-  butterfly_0/intadd_3/n8 (net)                 2                   0.00       7.10 f
-  U651/A (sky130_fd_sc_hd__clkinv_1)                      0.08      0.00       7.10 f
-  U651/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       7.15 r
-  n397 (net)                                    1                   0.00       7.15 r
-  U650/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       7.15 r
-  U650/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.06      0.06       7.21 f
-  butterfly_0/intadd_3/n7 (net)                 1                   0.00       7.21 f
-  butterfly_0/intadd_3/U7/CIN (sky130_fd_sc_hd__fa_1)     0.06      0.00       7.21 f
-  butterfly_0/intadd_3/U7/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.35       7.56 f
-  butterfly_0/intadd_3/n6 (net)                 1                   0.00       7.56 f
-  U3224/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.56 f
-  U3224/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       7.80 f
-  butterfly_0/intadd_3/n5 (net)                 1                   0.00       7.80 f
-  butterfly_0/intadd_3/U5/CI (sky130_fd_sc_hd__fah_1)     0.06      0.00       7.80 f
-  butterfly_0/intadd_3/U5/COUT (sky130_fd_sc_hd__fah_1)
-                                                          0.06      0.23       8.04 f
-  butterfly_0/intadd_3/n4 (net)                 1                   0.00       8.04 f
-  U3233/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       8.04 f
-  U3233/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       8.27 f
-  butterfly_0/intadd_3/n3 (net)                 1                   0.00       8.27 f
-  butterfly_0/intadd_3/U3/CI (sky130_fd_sc_hd__fah_1)     0.06      0.00       8.27 f
-  butterfly_0/intadd_3/U3/COUT (sky130_fd_sc_hd__fah_1)
-                                                          0.06      0.23       8.51 f
-  butterfly_0/intadd_3/n2 (net)                 1                   0.00       8.51 f
-  U3231/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       8.51 f
-  U3231/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.25       8.76 f
-  butterfly_0/intadd_3/n1 (net)                 1                   0.00       8.76 f
-  U2079/B (sky130_fd_sc_hd__xnor2_1)                      0.07      0.00       8.76 f
-  U2079/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.88 f
-  butterfly_0/N31 (net)                         1                   0.00       8.88 f
-  butterfly_0/Zra_F_reg[27]/D (sky130_fd_sc_hd__dfxtp_1)
-                                                          0.04      0.00       8.88 f
-  data arrival time                                                            8.88
-
-  clock MYCLK (rise edge)                                          10.00      10.00
-  clock network delay (ideal)                                       0.00      10.00
-  clock uncertainty                                                -1.00       9.00
-  butterfly_0/Zra_F_reg[27]/CLK (sky130_fd_sc_hd__dfxtp_1)          0.00       9.00 r
-  library setup time                                               -0.10       8.90
-  data required time                                                           8.90
-  ------------------------------------------------------------------------------------
-  data required time                                                           8.90
-  data arrival time                                                           -8.88
-  ------------------------------------------------------------------------------------
-  slack (MET)                                                                  0.02
-
-
   Startpoint: butterfly_0/Zrb_F_reg[1]
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Yr_full_F_reg[28]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -758,98 +1528,98 @@ Wire Load Model Mode: top
   butterfly_0/Zrb_F_reg[1]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.05      0.32       0.32 r
   butterfly_0/Zrb_F[1] (net)                    1                   0.00       0.32 r
-  U952/A (sky130_fd_sc_hd__clkinv_1)                      0.05      0.00       0.32 r
-  U952/Y (sky130_fd_sc_hd__clkinv_1)                      0.05      0.07       0.39 f
+  U959/A (sky130_fd_sc_hd__clkinv_1)                      0.05      0.00       0.32 r
+  U959/Y (sky130_fd_sc_hd__clkinv_1)                      0.05      0.07       0.39 f
   n476 (net)                                    1                   0.00       0.39 f
-  U1227/B (sky130_fd_sc_hd__fa_1)                         0.05      0.00       0.39 f
-  U1227/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       0.79 f
+  U1232/B (sky130_fd_sc_hd__fa_1)                         0.05      0.00       0.39 f
+  U1232/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       0.79 f
   n480 (net)                                    1                   0.00       0.79 f
-  U377/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       0.79 f
-  U377/SUM (sky130_fd_sc_hd__fa_1)                        0.06      0.49       1.28 r
+  U376/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       0.79 f
+  U376/SUM (sky130_fd_sc_hd__fa_1)                        0.06      0.49       1.28 r
   n482 (net)                                    1                   0.00       1.28 r
-  U847/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       1.28 r
-  U847/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.06       1.33 f
+  U853/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       1.28 r
+  U853/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.06       1.33 f
   n483 (net)                                    1                   0.00       1.33 f
-  U1229/B (sky130_fd_sc_hd__ha_1)                         0.03      0.00       1.33 f
-  U1229/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.17       1.50 f
+  U1234/B (sky130_fd_sc_hd__ha_1)                         0.03      0.00       1.33 f
+  U1234/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.17       1.50 f
   n486 (net)                                    1                   0.00       1.50 f
-  U1230/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.50 f
-  U1230/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.69 f
+  U1235/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.50 f
+  U1235/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.69 f
   n488 (net)                                    1                   0.00       1.69 f
-  U1231/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.69 f
-  U1231/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.88 f
+  U1236/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.69 f
+  U1236/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       1.88 f
   n490 (net)                                    1                   0.00       1.88 f
-  U1232/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.88 f
-  U1232/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.07 f
+  U1237/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       1.88 f
+  U1237/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.07 f
   n492 (net)                                    1                   0.00       2.07 f
-  U1233/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.07 f
-  U1233/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.26 f
+  U1238/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.07 f
+  U1238/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.26 f
   n494 (net)                                    1                   0.00       2.26 f
-  U1234/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.26 f
-  U1234/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.45 f
+  U1239/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.26 f
+  U1239/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.45 f
   n496 (net)                                    1                   0.00       2.45 f
-  U1235/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.45 f
-  U1235/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.63 f
+  U1240/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.45 f
+  U1240/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.63 f
   n498 (net)                                    1                   0.00       2.63 f
-  U1236/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.63 f
-  U1236/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.82 f
+  U1241/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.63 f
+  U1241/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       2.82 f
   n500 (net)                                    1                   0.00       2.82 f
-  U1237/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.82 f
-  U1237/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       3.01 f
+  U1242/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       2.82 f
+  U1242/COUT (sky130_fd_sc_hd__ha_1)                      0.04      0.19       3.01 f
   n502 (net)                                    1                   0.00       3.01 f
-  U1238/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       3.01 f
-  U1238/COUT (sky130_fd_sc_hd__ha_1)                      0.06      0.21       3.22 f
+  U1243/A (sky130_fd_sc_hd__ha_1)                         0.04      0.00       3.01 f
+  U1243/COUT (sky130_fd_sc_hd__ha_1)                      0.06      0.21       3.22 f
   n505 (net)                                    1                   0.00       3.22 f
-  U1239/B (sky130_fd_sc_hd__fa_1)                         0.06      0.00       3.22 f
-  U1239/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       3.61 f
+  U1244/B (sky130_fd_sc_hd__fa_1)                         0.06      0.00       3.22 f
+  U1244/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       3.61 f
   n507 (net)                                    1                   0.00       3.61 f
-  U440/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.61 f
-  U440/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       3.99 f
+  U441/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.61 f
+  U441/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       3.99 f
   n576 (net)                                    1                   0.00       3.99 f
-  U1331/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.99 f
-  U1331/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.37 f
+  U1336/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.99 f
+  U1336/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.37 f
   n510 (net)                                    1                   0.00       4.37 f
-  U1008/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.37 f
-  U1008/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.75 f
+  U1014/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.37 f
+  U1014/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.75 f
   n568 (net)                                    1                   0.00       4.75 f
-  U1327/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.75 f
-  U1327/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       5.11 f
-  n514 (net)                                    1                   0.00       5.11 f
-  U1240/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.11 f
-  U1240/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.37 f
+  U1332/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.75 f
+  U1332/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       5.11 f
+  n518 (net)                                    1                   0.00       5.11 f
+  U1249/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.11 f
+  U1249/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.37 f
   n572 (net)                                    1                   0.00       5.37 f
-  U1329/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.37 f
-  U1329/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.72 f
-  n518 (net)                                    1                   0.00       5.72 f
-  U1242/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.72 f
-  U1242/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.98 f
+  U1334/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.37 f
+  U1334/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       5.72 f
+  n524 (net)                                    1                   0.00       5.72 f
+  U1252/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.72 f
+  U1252/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       5.98 f
   n615 (net)                                    1                   0.00       5.98 f
-  U1344/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.98 f
-  U1344/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.33 f
-  n516 (net)                                    1                   0.00       6.33 f
-  U1241/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.33 f
-  U1241/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.59 f
+  U1349/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       5.98 f
+  U1349/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.33 f
+  n522 (net)                                    1                   0.00       6.33 f
+  U1251/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.33 f
+  U1251/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.59 f
   n611 (net)                                    1                   0.00       6.59 f
-  U1342/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       6.59 f
-  U1342/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.94 f
-  n524 (net)                                    1                   0.00       6.94 f
-  U1247/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.94 f
-  U1247/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.20 f
+  U1347/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       6.59 f
+  U1347/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       6.94 f
+  n520 (net)                                    1                   0.00       6.94 f
+  U1250/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       6.94 f
+  U1250/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.20 f
   n607 (net)                                    1                   0.00       7.20 f
-  U1340/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.20 f
-  U1340/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       7.55 f
+  U1345/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.20 f
+  U1345/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       7.55 f
   n593 (net)                                    1                   0.00       7.55 f
-  U1336/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.55 f
-  U1336/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.81 f
+  U1341/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.55 f
+  U1341/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       7.81 f
   n605 (net)                                    1                   0.00       7.81 f
-  U1339/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.81 f
-  U1339/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       8.16 f
+  U1344/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       7.81 f
+  U1344/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       8.16 f
   n596 (net)                                    1                   0.00       8.16 f
-  U1337/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       8.16 f
-  U1337/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       8.42 f
+  U1342/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       8.16 f
+  U1342/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       8.42 f
   n598 (net)                                    1                   0.00       8.42 f
-  U439/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       8.42 f
-  U439/SUM (sky130_fd_sc_hd__fa_1)                        0.07      0.42       8.84 f
+  U440/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       8.42 f
+  U440/SUM (sky130_fd_sc_hd__fa_1)                        0.07      0.42       8.84 f
   butterfly_0/N208 (net)                        1                   0.00       8.84 f
   butterfly_0/Yr_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.07      0.00       8.84 f
@@ -872,7 +1642,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Xi_full_F_reg[28]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -884,125 +1654,125 @@ Wire Load Model Mode: top
   butterfly_0/Zib_F_reg[0]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.03      0.31       0.31 f
   butterfly_0/Zib_F[0] (net)                    1                   0.00       0.31 f
-  U1200/A (sky130_fd_sc_hd__ha_1)                         0.03      0.00       0.31 f
-  U1200/COUT (sky130_fd_sc_hd__ha_1)                      0.05      0.19       0.51 f
-  n419 (net)                                    1                   0.00       0.51 f
-  U376/CIN (sky130_fd_sc_hd__fa_2)                        0.05      0.00       0.51 f
-  U376/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.33       0.84 f
-  n423 (net)                                    1                   0.00       0.84 f
-  U378/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       0.84 f
-  U378/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.40       1.23 f
-  n428 (net)                                    2                   0.00       1.23 f
-  U886/A (sky130_fd_sc_hd__clkinv_1)                      0.09      0.00       1.23 f
-  U886/Y (sky130_fd_sc_hd__clkinv_1)                      0.04      0.06       1.29 r
+  U1205/A (sky130_fd_sc_hd__ha_1)                         0.03      0.00       0.31 f
+  U1205/COUT (sky130_fd_sc_hd__ha_1)                      0.05      0.19       0.51 f
+  n418 (net)                                    1                   0.00       0.51 f
+  U375/CIN (sky130_fd_sc_hd__fa_2)                        0.05      0.00       0.51 f
+  U375/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.33       0.84 f
+  n422 (net)                                    1                   0.00       0.84 f
+  U377/CIN (sky130_fd_sc_hd__fa_1)                        0.07      0.00       0.84 f
+  U377/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.40       1.23 f
+  n427 (net)                                    2                   0.00       1.23 f
+  U891/A (sky130_fd_sc_hd__clkinv_1)                      0.09      0.00       1.23 f
+  U891/Y (sky130_fd_sc_hd__clkinv_1)                      0.04      0.06       1.29 r
   n290 (net)                                    1                   0.00       1.29 r
-  U998/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.04      0.00       1.29 r
-  U998/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       1.36 f
-  n431 (net)                                    2                   0.00       1.36 f
-  U1115/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.36 f
-  U1115/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.43 r
+  U1004/B2 (sky130_fd_sc_hd__o2bb2ai_1)                   0.04      0.00       1.29 r
+  U1004/Y (sky130_fd_sc_hd__o2bb2ai_1)                    0.07      0.07       1.36 f
+  n430 (net)                                    2                   0.00       1.36 f
+  U1120/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.36 f
+  U1120/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.43 r
   n293 (net)                                    1                   0.00       1.43 r
-  U1117/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.43 r
-  U1117/Y (sky130_fd_sc_hd__nand2_1)                      0.07      0.08       1.52 f
-  n434 (net)                                    2                   0.00       1.52 f
-  U581/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.52 f
-  U581/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.56 r
+  U1122/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.43 r
+  U1122/Y (sky130_fd_sc_hd__nand2_1)                      0.07      0.08       1.52 f
+  n433 (net)                                    2                   0.00       1.52 f
+  U582/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.52 f
+  U582/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.56 r
   n294 (net)                                    1                   0.00       1.56 r
-  U741/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       1.56 r
-  U741/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       1.63 f
-  n437 (net)                                    2                   0.00       1.63 f
-  U1118/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.63 f
-  U1118/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.71 r
+  U747/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       1.56 r
+  U747/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       1.63 f
+  n436 (net)                                    2                   0.00       1.63 f
+  U1123/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.63 f
+  U1123/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.71 r
   n297 (net)                                    1                   0.00       1.71 r
-  U1120/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.71 r
-  U1120/Y (sky130_fd_sc_hd__nand2_1)                      0.07      0.08       1.79 f
-  n440 (net)                                    2                   0.00       1.79 f
-  U684/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.79 f
-  U684/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.84 r
+  U1125/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.71 r
+  U1125/Y (sky130_fd_sc_hd__nand2_1)                      0.07      0.08       1.79 f
+  n439 (net)                                    2                   0.00       1.79 f
+  U691/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.79 f
+  U691/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.84 r
   n298 (net)                                    1                   0.00       1.84 r
-  U999/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       1.84 r
-  U999/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       1.90 f
-  n443 (net)                                    2                   0.00       1.90 f
-  U1121/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.90 f
-  U1121/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.98 r
+  U1005/B2 (sky130_fd_sc_hd__o2bb2ai_1)                   0.03      0.00       1.84 r
+  U1005/Y (sky130_fd_sc_hd__o2bb2ai_1)                    0.07      0.07       1.90 f
+  n442 (net)                                    2                   0.00       1.90 f
+  U1126/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       1.90 f
+  U1126/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       1.98 r
   n301 (net)                                    1                   0.00       1.98 r
-  U1123/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.98 r
-  U1123/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.07       2.04 f
-  n445 (net)                                    1                   0.00       2.04 f
-  U396/CIN (sky130_fd_sc_hd__fa_1)                        0.05      0.00       2.04 f
-  U396/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.39       2.43 f
-  n450 (net)                                    2                   0.00       2.43 f
-  U478/A (sky130_fd_sc_hd__clkinv_1)                      0.09      0.00       2.43 f
-  U478/Y (sky130_fd_sc_hd__clkinv_1)                      0.04      0.06       2.49 r
+  U1128/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.98 r
+  U1128/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.07       2.04 f
+  n444 (net)                                    1                   0.00       2.04 f
+  U395/CIN (sky130_fd_sc_hd__fa_1)                        0.05      0.00       2.04 f
+  U395/COUT (sky130_fd_sc_hd__fa_1)                       0.09      0.39       2.43 f
+  n449 (net)                                    2                   0.00       2.43 f
+  U477/A (sky130_fd_sc_hd__clkinv_1)                      0.09      0.00       2.43 f
+  U477/Y (sky130_fd_sc_hd__clkinv_1)                      0.04      0.06       2.49 r
   n302 (net)                                    1                   0.00       2.49 r
-  U654/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.04      0.00       2.49 r
-  U654/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       2.56 f
-  n453 (net)                                    2                   0.00       2.56 f
-  U1124/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       2.56 f
-  U1124/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       2.63 r
+  U661/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.04      0.00       2.49 r
+  U661/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.07      0.07       2.56 f
+  n452 (net)                                    2                   0.00       2.56 f
+  U1129/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       2.56 f
+  U1129/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       2.63 r
   n305 (net)                                    1                   0.00       2.63 r
-  U1126/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       2.63 r
-  U1126/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       2.71 f
+  U1131/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       2.63 r
+  U1131/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       2.71 f
   n322 (net)                                    2                   0.00       2.71 f
-  U1128/A (sky130_fd_sc_hd__nand2_1)                      0.06      0.00       2.71 f
-  U1128/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       2.77 r
+  U1133/A (sky130_fd_sc_hd__nand2_1)                      0.06      0.00       2.71 f
+  U1133/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.06       2.77 r
   n310 (net)                                    1                   0.00       2.77 r
-  U1130/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       2.77 r
-  U1130/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       2.82 f
+  U1135/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       2.77 r
+  U1135/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       2.82 f
   n324 (net)                                    1                   0.00       2.82 f
-  U434/CIN (sky130_fd_sc_hd__fa_1)                        0.04      0.00       2.82 f
-  U434/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.37       3.19 f
+  U433/CIN (sky130_fd_sc_hd__fa_1)                        0.04      0.00       2.82 f
+  U433/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.37       3.19 f
   n321 (net)                                    1                   0.00       3.19 f
-  U363/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.19 f
-  U363/SUM (sky130_fd_sc_hd__fa_1)                        0.11      0.48       3.67 f
-  n630 (net)                                    2                   0.00       3.67 f
-  U1351/B (sky130_fd_sc_hd__fa_1)                         0.11      0.00       3.67 f
-  U1351/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.42       4.09 f
-  n327 (net)                                    1                   0.00       4.09 f
-  U1009/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.09 f
-  U1009/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.47 f
-  n627 (net)                                    1                   0.00       4.47 f
-  U1350/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.47 f
-  U1350/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.85 f
-  n625 (net)                                    1                   0.00       4.85 f
-  U1349/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.85 f
-  U1349/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       5.23 f
+  U365/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.19 f
+  U365/SUM (sky130_fd_sc_hd__fa_1)                        0.11      0.48       3.67 f
+  n628 (net)                                    2                   0.00       3.67 f
+  U1355/B (sky130_fd_sc_hd__fa_1)                         0.11      0.00       3.67 f
+  U1355/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.42       4.09 f
+  n328 (net)                                    1                   0.00       4.09 f
+  U1015/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.09 f
+  U1015/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.47 f
+  n625 (net)                                    1                   0.00       4.47 f
+  U1354/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.47 f
+  U1354/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.85 f
+  n327 (net)                                    1                   0.00       4.85 f
+  U358/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       4.85 f
+  U358/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       5.23 f
   n623 (net)                                    1                   0.00       5.23 f
-  U1348/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.23 f
-  U1348/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       5.61 f
-  n329 (net)                                    1                   0.00       5.61 f
+  U1353/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.23 f
+  U1353/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       5.61 f
+  n331 (net)                                    1                   0.00       5.61 f
   U354/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       5.61 f
   U354/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       5.99 f
   n666 (net)                                    1                   0.00       5.99 f
-  U1365/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.99 f
-  U1365/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       6.37 f
-  n328 (net)                                    1                   0.00       6.37 f
+  U1370/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.99 f
+  U1370/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       6.37 f
+  n330 (net)                                    1                   0.00       6.37 f
   U350/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       6.37 f
   U350/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       6.75 f
   n662 (net)                                    1                   0.00       6.75 f
-  U1363/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.75 f
-  U1363/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       7.13 f
-  n658 (net)                                    1                   0.00       7.13 f
-  U1361/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       7.13 f
-  U1361/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       7.51 f
-  n331 (net)                                    1                   0.00       7.51 f
-  U345/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.51 f
-  U345/COUT (sky130_fd_sc_hd__fa_1)                       0.07      0.36       7.87 f
+  U1368/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.75 f
+  U1368/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       7.13 f
+  n329 (net)                                    1                   0.00       7.13 f
+  U346/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.13 f
+  U346/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       7.51 f
+  n658 (net)                                    1                   0.00       7.51 f
+  U1366/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       7.51 f
+  U1366/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.36       7.87 f
   n650 (net)                                    1                   0.00       7.87 f
-  U1357/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.87 f
-  U1357/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.27       8.14 f
+  U1362/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       7.87 f
+  U1362/COUT (sky130_fd_sc_hd__fah_1)                     0.08      0.27       8.14 f
   n637 (net)                                    2                   0.00       8.14 f
-  U649/A (sky130_fd_sc_hd__clkinv_1)                      0.08      0.00       8.14 f
-  U649/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       8.19 r
+  U654/A (sky130_fd_sc_hd__clkinv_1)                      0.08      0.00       8.14 f
+  U654/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       8.19 r
   n638 (net)                                    1                   0.00       8.19 r
-  U648/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       8.19 r
-  U648/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.06      0.06       8.25 f
+  U653/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       8.19 r
+  U653/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.06      0.06       8.25 f
   n652 (net)                                    1                   0.00       8.25 f
-  U1358/CIN (sky130_fd_sc_hd__fa_1)                       0.06      0.00       8.25 f
-  U1358/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       8.60 f
+  U1363/CIN (sky130_fd_sc_hd__fa_1)                       0.06      0.00       8.25 f
+  U1363/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.35       8.60 f
   n640 (net)                                    1                   0.00       8.60 f
-  U1355/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       8.60 f
-  U1355/SUM (sky130_fd_sc_hd__fah_1)                      0.05      0.23       8.83 f
+  U1360/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       8.60 f
+  U1360/SUM (sky130_fd_sc_hd__fah_1)                      0.05      0.23       8.83 f
   butterfly_0/N176 (net)                        1                   0.00       8.83 f
   butterfly_0/Xi_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.05      0.00       8.83 f
@@ -1025,7 +1795,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Zib_F_reg[26]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -1037,26 +1807,26 @@ Wire Load Model Mode: top
   butterfly_0/Bi_F_reg[7]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.38      0.56       0.56 r
   butterfly_0/Bi_F[7] (net)                    16                   0.00       0.56 r
-  U404/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
-  U404/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
+  U403/A (sky130_fd_sc_hd__clkinv_1)                      0.38      0.00       0.56 r
+  U403/Y (sky130_fd_sc_hd__clkinv_1)                      0.29      0.36       0.92 f
   n2047 (net)                                  14                   0.00       0.92 f
-  U1399/A2 (sky130_fd_sc_hd__o21ai_2)                     0.29      0.00       0.92 f
-  U1399/Y (sky130_fd_sc_hd__o21ai_2)                      0.26      0.33       1.24 r
+  U1404/A2 (sky130_fd_sc_hd__o21ai_2)                     0.29      0.00       0.92 f
+  U1404/Y (sky130_fd_sc_hd__o21ai_2)                      0.26      0.33       1.24 r
   n2095 (net)                                   7                   0.00       1.24 r
-  U1400/A (sky130_fd_sc_hd__inv_2)                        0.26      0.00       1.24 r
-  U1400/Y (sky130_fd_sc_hd__inv_2)                        0.09      0.12       1.36 f
+  U1405/A (sky130_fd_sc_hd__inv_2)                        0.26      0.00       1.24 r
+  U1405/Y (sky130_fd_sc_hd__inv_2)                        0.09      0.12       1.36 f
   n2072 (net)                                  10                   0.00       1.36 f
-  U1675/B (sky130_fd_sc_hd__nor2_1)                       0.09      0.00       1.36 f
-  U1675/Y (sky130_fd_sc_hd__nor2_1)                       0.29      0.25       1.62 r
+  U1677/B (sky130_fd_sc_hd__nor2_1)                       0.09      0.00       1.36 f
+  U1677/Y (sky130_fd_sc_hd__nor2_1)                       0.29      0.25       1.62 r
   n1904 (net)                                   6                   0.00       1.62 r
-  U403/A (sky130_fd_sc_hd__clkinv_1)                      0.29      0.00       1.62 r
-  U403/Y (sky130_fd_sc_hd__clkinv_1)                      0.15      0.20       1.82 f
+  U402/A (sky130_fd_sc_hd__clkinv_1)                      0.29      0.00       1.62 r
+  U402/Y (sky130_fd_sc_hd__clkinv_1)                      0.15      0.20       1.82 f
   n1986 (net)                                   6                   0.00       1.82 f
-  U1676/B (sky130_fd_sc_hd__nor2_1)                       0.15      0.00       1.82 f
-  U1676/Y (sky130_fd_sc_hd__nor2_1)                       0.09      0.12       1.93 r
+  U1678/B (sky130_fd_sc_hd__nor2_1)                       0.15      0.00       1.82 f
+  U1678/Y (sky130_fd_sc_hd__nor2_1)                       0.09      0.12       1.93 r
   n820 (net)                                    1                   0.00       1.93 r
-  U1677/C1 (sky130_fd_sc_hd__a211oi_1)                    0.09      0.00       1.93 r
-  U1677/Y (sky130_fd_sc_hd__a211oi_1)                     0.14      0.07       2.00 f
+  U1679/C1 (sky130_fd_sc_hd__a211oi_1)                    0.09      0.00       1.93 r
+  U1679/Y (sky130_fd_sc_hd__a211oi_1)                     0.14      0.07       2.00 f
   butterfly_0/intadd_45/B[0] (net)              1                   0.00       2.00 f
   butterfly_0/intadd_45/U4/A (sky130_fd_sc_hd__fa_1)      0.14      0.00       2.00 f
   butterfly_0/intadd_45/U4/COUT (sky130_fd_sc_hd__fa_1)
@@ -1071,8 +1841,8 @@ Wire Load Model Mode: top
   butterfly_0/intadd_44/U2/SUM (sky130_fd_sc_hd__fa_1)
                                                           0.06      0.52       3.42 r
   butterfly_0/intadd_44/SUM[2] (net)            1                   0.00       3.42 r
-  U427/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       3.42 r
-  U427/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       3.50 f
+  U426/A (sky130_fd_sc_hd__clkinv_1)                      0.06      0.00       3.42 r
+  U426/Y (sky130_fd_sc_hd__clkinv_1)                      0.06      0.08       3.50 f
   butterfly_0/intadd_0/A[4] (net)               1                   0.00       3.50 f
   U3245/B (sky130_fd_sc_hd__fah_1)                        0.06      0.00       3.50 f
   U3245/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.31       3.81 f
@@ -1099,14 +1869,14 @@ Wire Load Model Mode: top
   butterfly_0/intadd_0/U14/COUT (sky130_fd_sc_hd__fa_1)
                                                           0.07      0.35       5.50 f
   butterfly_0/intadd_0/n13 (net)                1                   0.00       5.50 f
-  U3239/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.50 f
-  U3239/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       5.73 f
+  U3238/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       5.50 f
+  U3238/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.24       5.73 f
   butterfly_0/intadd_0/n12 (net)                1                   0.00       5.73 f
-  U3236/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.73 f
-  U3236/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       5.97 f
+  U3235/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.73 f
+  U3235/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       5.97 f
   butterfly_0/intadd_0/n11 (net)                1                   0.00       5.97 f
-  U3235/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.97 f
-  U3235/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.20 f
+  U3234/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       5.97 f
+  U3234/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.20 f
   butterfly_0/intadd_0/n10 (net)                1                   0.00       6.20 f
   U3243/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.20 f
   U3243/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       6.44 f
@@ -1158,7 +1928,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Xr_full_F_reg[28]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -1170,125 +1940,125 @@ Wire Load Model Mode: top
   butterfly_0/Zrb_F_reg[1]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.05      0.32       0.32 r
   butterfly_0/Zrb_F[1] (net)                    1                   0.00       0.32 r
-  U952/A (sky130_fd_sc_hd__clkinv_1)                      0.05      0.00       0.32 r
-  U952/Y (sky130_fd_sc_hd__clkinv_1)                      0.05      0.07       0.39 f
+  U959/A (sky130_fd_sc_hd__clkinv_1)                      0.05      0.00       0.32 r
+  U959/Y (sky130_fd_sc_hd__clkinv_1)                      0.05      0.07       0.39 f
   n476 (net)                                    1                   0.00       0.39 f
-  U1227/B (sky130_fd_sc_hd__fa_1)                         0.05      0.00       0.39 f
-  U1227/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       0.79 f
+  U1232/B (sky130_fd_sc_hd__fa_1)                         0.05      0.00       0.39 f
+  U1232/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.40       0.79 f
   n480 (net)                                    1                   0.00       0.79 f
-  U377/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       0.79 f
-  U377/COUT (sky130_fd_sc_hd__fa_1)                       0.07      0.37       1.15 f
+  U376/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       0.79 f
+  U376/COUT (sky130_fd_sc_hd__fa_1)                       0.07      0.37       1.15 f
   n333 (net)                                    1                   0.00       1.15 f
-  U839/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.15 f
-  U839/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.20 r
+  U845/A (sky130_fd_sc_hd__clkinv_1)                      0.07      0.00       1.15 f
+  U845/Y (sky130_fd_sc_hd__clkinv_1)                      0.03      0.05       1.20 r
   n334 (net)                                    1                   0.00       1.20 r
-  U997/B2 (sky130_fd_sc_hd__o2bb2ai_1)                    0.03      0.00       1.20 r
-  U997/Y (sky130_fd_sc_hd__o2bb2ai_1)                     0.04      0.04       1.25 f
+  U1003/B2 (sky130_fd_sc_hd__o2bb2ai_1)                   0.03      0.00       1.20 r
+  U1003/Y (sky130_fd_sc_hd__o2bb2ai_1)                    0.04      0.04       1.25 f
   n336 (net)                                    1                   0.00       1.25 f
-  U1143/B1 (sky130_fd_sc_hd__o21ai_1)                     0.04      0.00       1.25 f
-  U1143/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.31 r
+  U1148/B1 (sky130_fd_sc_hd__o21ai_1)                     0.04      0.00       1.25 f
+  U1148/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.31 r
   n338 (net)                                    1                   0.00       1.31 r
-  U1145/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.31 r
-  U1145/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.36 f
+  U1150/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.31 r
+  U1150/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.36 f
   n341 (net)                                    1                   0.00       1.36 f
-  U1147/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.36 f
-  U1147/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.41 r
+  U1152/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.36 f
+  U1152/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.41 r
   n343 (net)                                    1                   0.00       1.41 r
-  U1149/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.41 r
-  U1149/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.45 f
+  U1154/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.41 r
+  U1154/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.45 f
   n344 (net)                                    1                   0.00       1.45 f
-  U1150/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.45 f
-  U1150/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.51 r
+  U1155/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.45 f
+  U1155/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.51 r
   n346 (net)                                    1                   0.00       1.51 r
-  U1152/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.51 r
-  U1152/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.56 f
+  U1157/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.51 r
+  U1157/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.56 f
   n349 (net)                                    1                   0.00       1.56 f
-  U1154/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.56 f
-  U1154/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.61 r
+  U1159/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.56 f
+  U1159/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.61 r
   n351 (net)                                    1                   0.00       1.61 r
-  U1156/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.61 r
-  U1156/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.64 f
+  U1161/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.61 r
+  U1161/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.64 f
   n352 (net)                                    1                   0.00       1.64 f
-  U1157/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.64 f
-  U1157/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.70 r
+  U1162/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.64 f
+  U1162/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.70 r
   n354 (net)                                    1                   0.00       1.70 r
-  U1159/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.70 r
-  U1159/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.75 f
+  U1164/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.70 r
+  U1164/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.75 f
   n357 (net)                                    1                   0.00       1.75 f
-  U1161/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.75 f
-  U1161/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.80 r
+  U1166/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.75 f
+  U1166/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.80 r
   n359 (net)                                    1                   0.00       1.80 r
-  U1163/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.80 r
-  U1163/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.84 f
+  U1168/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.80 r
+  U1168/Y (sky130_fd_sc_hd__nand2_1)                      0.03      0.04       1.84 f
   n360 (net)                                    1                   0.00       1.84 f
-  U1164/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.84 f
-  U1164/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.90 r
+  U1169/B1 (sky130_fd_sc_hd__o21ai_1)                     0.03      0.00       1.84 f
+  U1169/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.06       1.90 r
   n362 (net)                                    1                   0.00       1.90 r
-  U1166/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.90 r
-  U1166/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.95 f
+  U1171/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       1.90 r
+  U1171/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       1.95 f
   n365 (net)                                    1                   0.00       1.95 f
-  U1168/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.95 f
-  U1168/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       2.00 r
+  U1173/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       1.95 f
+  U1173/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       2.00 r
   n367 (net)                                    1                   0.00       2.00 r
-  U1170/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       2.00 r
-  U1170/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.06       2.06 f
-  n376 (net)                                    2                   0.00       2.06 f
-  U1171/B1 (sky130_fd_sc_hd__o21ai_1)                     0.05      0.00       2.06 f
-  U1171/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       2.13 r
+  U1175/A (sky130_fd_sc_hd__nand2_1)                      0.04      0.00       2.00 r
+  U1175/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.06       2.06 f
+  n372 (net)                                    2                   0.00       2.06 f
+  U1176/B1 (sky130_fd_sc_hd__o21ai_1)                     0.05      0.00       2.06 f
+  U1176/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.07       2.13 r
   n369 (net)                                    1                   0.00       2.13 r
-  U1173/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       2.13 r
-  U1173/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.07       2.19 f
-  n377 (net)                                    1                   0.00       2.19 f
-  U365/CIN (sky130_fd_sc_hd__fa_1)                        0.05      0.00       2.19 f
-  U365/SUM (sky130_fd_sc_hd__fa_1)                        0.10      0.46       2.66 f
+  U1178/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       2.13 r
+  U1178/Y (sky130_fd_sc_hd__nand2_1)                      0.05      0.07       2.19 f
+  n373 (net)                                    1                   0.00       2.19 f
+  U366/CIN (sky130_fd_sc_hd__fa_1)                        0.05      0.00       2.19 f
+  U366/SUM (sky130_fd_sc_hd__fa_1)                        0.10      0.46       2.66 f
   n578 (net)                                    2                   0.00       2.66 f
-  U1332/CIN (sky130_fd_sc_hd__fa_1)                       0.10      0.00       2.66 f
-  U1332/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.39       3.04 f
-  n391 (net)                                    1                   0.00       3.04 f
-  U361/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.04 f
-  U361/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       3.42 f
+  U1337/CIN (sky130_fd_sc_hd__fa_1)                       0.10      0.00       2.66 f
+  U1337/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.39       3.04 f
+  n379 (net)                                    1                   0.00       3.04 f
+  U363/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.04 f
+  U363/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       3.42 f
   n580 (net)                                    1                   0.00       3.42 f
-  U1333/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.42 f
-  U1333/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       3.80 f
-  n389 (net)                                    1                   0.00       3.80 f
-  U357/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.80 f
-  U357/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       4.18 f
+  U1338/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.42 f
+  U1338/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       3.80 f
+  n394 (net)                                    1                   0.00       3.80 f
+  U658/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       3.80 f
+  U658/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       4.18 f
   n570 (net)                                    1                   0.00       4.18 f
-  U1328/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.18 f
-  U1328/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.56 f
+  U1333/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.18 f
+  U1333/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.56 f
   n574 (net)                                    1                   0.00       4.56 f
-  U1330/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.56 f
-  U1330/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.94 f
-  n390 (net)                                    1                   0.00       4.94 f
-  U356/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       4.94 f
-  U356/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       5.32 f
+  U1335/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       4.56 f
+  U1335/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.94 f
+  n396 (net)                                    1                   0.00       4.94 f
+  U357/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       4.94 f
+  U357/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       5.32 f
   n617 (net)                                    1                   0.00       5.32 f
-  U1345/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.32 f
-  U1345/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       5.70 f
-  n396 (net)                                    1                   0.00       5.70 f
+  U1350/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       5.32 f
+  U1350/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       5.70 f
+  n395 (net)                                    1                   0.00       5.70 f
   U352/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       5.70 f
   U352/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       6.08 f
   n613 (net)                                    1                   0.00       6.08 f
-  U1343/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.08 f
-  U1343/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       6.46 f
+  U1348/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.08 f
+  U1348/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       6.46 f
   n582 (net)                                    1                   0.00       6.46 f
   U347/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       6.46 f
   U347/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       6.84 f
   n609 (net)                                    1                   0.00       6.84 f
-  U1341/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.84 f
-  U1341/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       7.22 f
+  U1346/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       6.84 f
+  U1346/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       7.22 f
   n590 (net)                                    1                   0.00       7.22 f
-  U344/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.22 f
-  U344/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       7.60 f
+  U345/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.22 f
+  U345/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       7.60 f
   n601 (net)                                    1                   0.00       7.60 f
-  U437/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.60 f
-  U437/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       7.98 f
+  U438/CIN (sky130_fd_sc_hd__fa_1)                        0.08      0.00       7.60 f
+  U438/COUT (sky130_fd_sc_hd__fa_1)                       0.08      0.38       7.98 f
   n603 (net)                                    1                   0.00       7.98 f
-  U1338/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       7.98 f
-  U1338/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       8.36 f
+  U1343/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       7.98 f
+  U1343/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       8.36 f
   n592 (net)                                    1                   0.00       8.36 f
-  U1005/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       8.36 f
-  U1005/SUM (sky130_fd_sc_hd__fa_1)                       0.07      0.42       8.78 f
+  U1011/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       8.36 f
+  U1011/SUM (sky130_fd_sc_hd__fa_1)                       0.07      0.42       8.78 f
   butterfly_0/N144 (net)                        1                   0.00       8.78 f
   butterfly_0/Xr_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.07      0.00       8.78 f
@@ -1311,7 +2081,7 @@ Wire Load Model Mode: top
               (rising edge-triggered flip-flop clocked by MYCLK)
   Endpoint: butterfly_0/Zia_F_reg[26]
             (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
+  Path Group: reg_to_reg
   Path Type: max
 
   Point                                       Fanout     Trans      Incr       Path
@@ -1323,35 +2093,35 @@ Wire Load Model Mode: top
   butterfly_0/Br_F_reg[5]/Q (sky130_fd_sc_hd__dfxtp_1)
                                                           0.32      0.52       0.52 r
   butterfly_0/Br_F[5] (net)                    13                   0.00       0.52 r
-  U442/A (sky130_fd_sc_hd__inv_2)                         0.32      0.00       0.52 r
-  U442/Y (sky130_fd_sc_hd__inv_2)                         0.14      0.18       0.70 f
+  U443/A (sky130_fd_sc_hd__inv_2)                         0.32      0.00       0.52 r
+  U443/Y (sky130_fd_sc_hd__inv_2)                         0.14      0.18       0.70 f
   n1064 (net)                                  17                   0.00       0.70 f
-  U1068/A2 (sky130_fd_sc_hd__a21oi_1)                     0.14      0.00       0.70 f
-  U1068/Y (sky130_fd_sc_hd__a21oi_1)                      0.50      0.46       1.16 r
+  U1074/A2 (sky130_fd_sc_hd__a21oi_1)                     0.14      0.00       0.70 f
+  U1074/Y (sky130_fd_sc_hd__a21oi_1)                      0.50      0.46       1.16 r
   n276 (net)                                    9                   0.00       1.16 r
-  U1069/A (sky130_fd_sc_hd__inv_2)                        0.50      0.00       1.16 r
-  U1069/Y (sky130_fd_sc_hd__inv_2)                        0.12      0.12       1.28 f
+  U1075/A (sky130_fd_sc_hd__inv_2)                        0.50      0.00       1.16 r
+  U1075/Y (sky130_fd_sc_hd__inv_2)                        0.12      0.12       1.28 f
   n1484 (net)                                   7                   0.00       1.28 f
-  U1097/C1 (sky130_fd_sc_hd__a221oi_1)                    0.12      0.00       1.28 f
-  U1097/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.29       1.57 r
+  U1102/C1 (sky130_fd_sc_hd__a221oi_1)                    0.12      0.00       1.28 f
+  U1102/Y (sky130_fd_sc_hd__a221oi_1)                     0.31      0.29       1.57 r
   n821 (net)                                    2                   0.00       1.57 r
-  U393/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.57 r
-  U393/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.79 f
+  U392/A (sky130_fd_sc_hd__clkinv_1)                      0.31      0.00       1.57 r
+  U392/Y (sky130_fd_sc_hd__clkinv_1)                      0.16      0.22       1.79 f
   n1505 (net)                                   7                   0.00       1.79 f
-  U1098/B (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.79 f
-  U1098/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.15       1.94 r
-  n1674 (net)                                   2                   0.00       1.94 r
-  U1099/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.94 r
-  U1099/Y (sky130_fd_sc_hd__nor2_1)                       0.06      0.08       2.03 f
+  U1103/B (sky130_fd_sc_hd__nor2_1)                       0.16      0.00       1.79 f
+  U1103/Y (sky130_fd_sc_hd__nor2_1)                       0.12      0.15       1.94 r
+  n1673 (net)                                   2                   0.00       1.94 r
+  U1104/B (sky130_fd_sc_hd__nor2_1)                       0.12      0.00       1.94 r
+  U1104/Y (sky130_fd_sc_hd__nor2_1)                       0.06      0.08       2.03 f
   n697 (net)                                    3                   0.00       2.03 f
-  U1100/B (sky130_fd_sc_hd__xor2_1)                       0.06      0.00       2.03 f
-  U1100/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.15       2.18 f
+  U1105/B (sky130_fd_sc_hd__xor2_1)                       0.06      0.00       2.03 f
+  U1105/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.15       2.18 f
   n288 (net)                                    1                   0.00       2.18 f
-  U1109/A (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.18 f
-  U1109/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.19       2.36 f
+  U1114/A (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.18 f
+  U1114/X (sky130_fd_sc_hd__xor2_1)                       0.08      0.19       2.36 f
   n691 (net)                                    2                   0.00       2.36 f
-  U1110/B (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.36 f
-  U1110/X (sky130_fd_sc_hd__xor2_1)                       0.09      0.16       2.53 f
+  U1115/B (sky130_fd_sc_hd__xor2_1)                       0.08      0.00       2.36 f
+  U1115/X (sky130_fd_sc_hd__xor2_1)                       0.09      0.16       2.53 f
   butterfly_0/intadd_1/A[1] (net)               1                   0.00       2.53 f
   U3210/B (sky130_fd_sc_hd__fa_1)                         0.09      0.00       2.53 f
   U3210/COUT (sky130_fd_sc_hd__fa_1)                      0.07      0.39       2.91 f
@@ -1359,17 +2129,17 @@ Wire Load Model Mode: top
   U3204/CI (sky130_fd_sc_hd__fah_1)                       0.07      0.00       2.91 f
   U3204/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       3.17 f
   butterfly_0/intadd_1/n21 (net)                1                   0.00       3.17 f
-  butterfly_0/intadd_1/U21/CIN (sky130_fd_sc_hd__fa_2)
+  butterfly_0/intadd_1/U21/CIN (sky130_fd_sc_hd__fa_1)
                                                           0.07      0.00       3.17 f
-  butterfly_0/intadd_1/U21/COUT (sky130_fd_sc_hd__fa_2)
-                                                          0.07      0.34       3.51 f
-  butterfly_0/intadd_1/n20 (net)                1                   0.00       3.51 f
-  butterfly_0/intadd_1/U20/CIN (sky130_fd_sc_hd__fa_1)
-                                                          0.07      0.00       3.51 f
-  butterfly_0/intadd_1/U20/COUT (sky130_fd_sc_hd__fa_1)
-                                                          0.08      0.37       3.88 f
-  butterfly_0/intadd_1/n19 (net)                1                   0.00       3.88 f
-  U3214/CIN (sky130_fd_sc_hd__fa_1)                       0.08      0.00       3.88 f
+  butterfly_0/intadd_1/U21/COUT (sky130_fd_sc_hd__fa_1)
+                                                          0.08      0.38       3.55 f
+  butterfly_0/intadd_1/n20 (net)                1                   0.00       3.55 f
+  butterfly_0/intadd_1/U20/CIN (sky130_fd_sc_hd__fa_2)
+                                                          0.08      0.00       3.55 f
+  butterfly_0/intadd_1/U20/COUT (sky130_fd_sc_hd__fa_2)
+                                                          0.07      0.34       3.89 f
+  butterfly_0/intadd_1/n19 (net)                1                   0.00       3.89 f
+  U3214/CIN (sky130_fd_sc_hd__fa_1)                       0.07      0.00       3.89 f
   U3214/COUT (sky130_fd_sc_hd__fa_1)                      0.08      0.38       4.27 f
   butterfly_0/intadd_1/n18 (net)                1                   0.00       4.27 f
   U3198/CIN (sky130_fd_sc_hd__fa_2)                       0.08      0.00       4.27 f
@@ -1399,43 +2169,43 @@ Wire Load Model Mode: top
   U3205/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.15 f
   butterfly_0/intadd_1/n12 (net)                1                   0.00       6.15 f
   U3199/CIN (sky130_fd_sc_hd__fa_2)                       0.07      0.00       6.15 f
-  U3199/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       6.47 f
-  butterfly_0/intadd_1/n11 (net)                1                   0.00       6.47 f
-  U3206/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.47 f
+  U3199/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       6.48 f
+  butterfly_0/intadd_1/n11 (net)                1                   0.00       6.48 f
+  U3206/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       6.48 f
   U3206/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.26       6.73 f
   butterfly_0/intadd_1/n10 (net)                1                   0.00       6.73 f
   U3200/CIN (sky130_fd_sc_hd__fa_2)                       0.07      0.00       6.73 f
-  U3200/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       7.05 f
-  butterfly_0/intadd_1/n9 (net)                 1                   0.00       7.05 f
-  U3207/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.05 f
+  U3200/COUT (sky130_fd_sc_hd__fa_2)                      0.06      0.32       7.06 f
+  butterfly_0/intadd_1/n9 (net)                 1                   0.00       7.06 f
+  U3207/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.06 f
   U3207/COUT (sky130_fd_sc_hd__fah_1)                     0.06      0.23       7.29 f
   butterfly_0/intadd_1/n8 (net)                 1                   0.00       7.29 f
-  U468/CI (sky130_fd_sc_hd__fah_1)                        0.06      0.00       7.29 f
-  U468/COUT (sky130_fd_sc_hd__fah_1)                      0.06      0.23       7.52 f
+  U467/CI (sky130_fd_sc_hd__fah_1)                        0.06      0.00       7.29 f
+  U467/COUT (sky130_fd_sc_hd__fah_1)                      0.06      0.23       7.52 f
   butterfly_0/intadd_1/n7 (net)                 1                   0.00       7.52 f
   U3219/CI (sky130_fd_sc_hd__fah_1)                       0.06      0.00       7.52 f
   U3219/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.27       7.79 f
   butterfly_0/intadd_1/n6 (net)                 2                   0.00       7.79 f
-  U1322/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       7.79 f
-  U1322/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       7.87 r
+  U1327/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       7.79 f
+  U1327/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       7.87 r
   n564 (net)                                    1                   0.00       7.87 r
-  U1324/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       7.87 r
-  U1324/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       7.92 f
+  U1329/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       7.87 r
+  U1329/Y (sky130_fd_sc_hd__nand2_1)                      0.04      0.05       7.92 f
   butterfly_0/intadd_1/n5 (net)                 1                   0.00       7.92 f
   U3220/CI (sky130_fd_sc_hd__fah_1)                       0.04      0.00       7.92 f
   U3220/COUT (sky130_fd_sc_hd__fah_1)                     0.07      0.25       8.17 f
   butterfly_0/intadd_1/n4 (net)                 1                   0.00       8.17 f
-  U456/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       8.17 f
-  U456/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.35       8.51 f
+  U455/CIN (sky130_fd_sc_hd__fa_2)                        0.07      0.00       8.17 f
+  U455/COUT (sky130_fd_sc_hd__fa_2)                       0.07      0.35       8.51 f
   butterfly_0/intadd_1/n3 (net)                 2                   0.00       8.51 f
-  U1057/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.51 f
-  U1057/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.59 r
+  U1063/B1 (sky130_fd_sc_hd__o21ai_1)                     0.07      0.00       8.51 f
+  U1063/Y (sky130_fd_sc_hd__o21ai_1)                      0.09      0.08       8.59 r
   n271 (net)                                    1                   0.00       8.59 r
-  U1059/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.59 r
-  U1059/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       8.67 f
+  U1065/A (sky130_fd_sc_hd__nand2_1)                      0.09      0.00       8.59 r
+  U1065/Y (sky130_fd_sc_hd__nand2_1)                      0.06      0.08       8.67 f
   n1764 (net)                                   2                   0.00       8.67 f
-  U1060/B (sky130_fd_sc_hd__xnor2_1)                      0.06      0.00       8.67 f
-  U1060/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.79 f
+  U1066/B (sky130_fd_sc_hd__xnor2_1)                      0.06      0.00       8.67 f
+  U1066/Y (sky130_fd_sc_hd__xnor2_1)                      0.04      0.12       8.79 f
   butterfly_0/N86 (net)                         1                   0.00       8.79 f
   butterfly_0/Zia_F_reg[26]/D (sky130_fd_sc_hd__dfxtp_1)
                                                           0.04      0.00       8.79 f
@@ -1451,7 +2221,7 @@ Wire Load Model Mode: top
   data required time                                                           8.90
   data arrival time                                                           -8.79
   ------------------------------------------------------------------------------------
-  slack (MET)                                                                  0.12
+  slack (MET)                                                                  0.11
 
 
 1

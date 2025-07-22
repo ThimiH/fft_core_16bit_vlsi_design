@@ -3,7 +3,7 @@
 Report : area
 Design : fft_top
 Version: V-2023.12
-Date   : Tue Jul 22 15:28:47 2025
+Date   : Tue Jul 22 16:02:07 2025
 ****************************************
 
 Library(s) Used:
@@ -17,7 +17,7 @@ Number of combinational cells:           5116
 Number of sequential cells:               973
 Number of macros/black boxes:               0
 Number of buf/inv:                        672
-Number of references:                      59
+Number of references:                      58
 
 Combinational area:              37191.919019
 Buf/Inv area:                     2528.675121

@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : fft_top
 Version: V-2023.12
-Date   : Tue Jul 22 15:28:47 2025
+Date   : Tue Jul 22 16:02:07 2025
 ****************************************
 
 
@@ -31,12 +31,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   4.0264 mW   (96%)
-  Net Switching Power  = 183.0927 uW    (4%)
+  Cell Internal Power  =   4.0265 mW   (96%)
+  Net Switching Power  = 183.0804 uW    (4%)
                          ---------
 Total Dynamic Power    =   4.2095 mW  (100%)
 
-Cell Leakage Power     =  20.2049 nW
+Cell Leakage Power     =  20.1958 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -46,9 +46,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      3.8757            0.0000            0.0000            3.8757  (  92.07%)  i
-register       4.3950e-02        2.3921e-02            8.1173        6.7888e-02  (   1.61%)
+register       4.3950e-02        2.3922e-02            8.1173        6.7890e-02  (   1.61%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.1068            0.1592           12.0875            0.2660  (   6.32%)
+combinational      0.1068            0.1592           12.0785            0.2660  (   6.32%)
 --------------------------------------------------------------------------------------------------
-Total              4.0264 mW         0.1831 mW        20.2049 nW         4.2095 mW
+Total              4.0265 mW         0.1831 mW        20.1958 nW         4.2096 mW
 1
