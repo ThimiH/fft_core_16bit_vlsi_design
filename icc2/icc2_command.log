@@ -1,0 +1,21 @@
+#@ # 
+#@ # Running icc2_shell Version V-2023.12-SP5-2 for linux64 -- Oct 30, 2024
+#@ # Date:   Wed Jul 23 10:27:39 2025
+#@ # Run by: user10@vlsilab
+#@ 
+
+set DESIGN_NAME "fft_top"
+set NETLIST_DIR "../netlists"
+set TECH_DIR "../libs/sky130_fd_sc_hd"
+set REPORTS_DIR "./reports"
+set OUTPUTS_DIR "./outputs"
+set_app_var search_path ". $TECH_DIR $NETLIST_DIR"
+read_tech_file $TECH_DIR/sky130_fd_sc_hd.tf
+read_tech_file $TECH_DIR/sky130_fd_sc_hd.tf
+help read*
+read_lib $TECH_DIR/sky130_fd_sc_hd.lib
+read_lib $TECH_DIR/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db $TECH_DIR/sky130_fd_sc_hd__tt_025C_1v80.db
+read_lib $TECH_DIR/sky130_fd_sc_hd__tt_025C_1v80.db
+read_lib_package $TECH_DIR
+exit
