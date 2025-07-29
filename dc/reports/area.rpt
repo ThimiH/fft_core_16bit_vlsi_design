@@ -3,28 +3,28 @@
 Report : area
 Design : fft_top
 Version: V-2023.12
-Date   : Wed Jul  9 01:09:48 2025
+Date   : Tue Jul 22 16:02:07 2025
 ****************************************
 
 Library(s) Used:
 
-    sky130_fd_sc_hd__tt_025C_1v80 (File: /home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db)
+    sky130_fd_sc_hd__tt_025C_1v80 (File: /home/vlsi_lab/user10/Documents/steps/fft_core_16bit_vlsi_design/libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db)
 
-Number of ports:                          378
-Number of nets:                          6521
-Number of cells:                         5690
-Number of combinational cells:           4683
-Number of sequential cells:              1005
+Number of ports:                          217
+Number of nets:                          6693
+Number of cells:                         6090
+Number of combinational cells:           5116
+Number of sequential cells:               973
 Number of macros/black boxes:               0
-Number of buf/inv:                        603
-Number of references:                      31
+Number of buf/inv:                        672
+Number of references:                      58
 
-Combinational area:              34844.667845
-Buf/Inv area:                     2264.671929
-Noncombinational area:           20119.295368
+Combinational area:              37191.919019
+Buf/Inv area:                     2528.675121
+Noncombinational area:           19486.188189
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 54963.963213
+Total cell area:                 56678.107208
 Total area:                 undefined
 1

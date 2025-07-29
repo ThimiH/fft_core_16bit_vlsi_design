@@ -1,0 +1,77 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:48:55 2025
+****************************************
+
+
+  Startpoint: butterfly_0/Zib_F_reg[0]
+               (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: butterfly_0/Yi_full_F_reg[28]
+               (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: reg_to_reg
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  butterfly_0/Zib_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.00       0.00 r
+  butterfly_0/Zib_F_reg[0]/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.31 *     0.31 f
+  U1205/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     0.51 f
+  U375/COUT (sky130_fd_sc_hd__fa_2)                       0.33 *     0.84 f
+  U377/SUM (sky130_fd_sc_hd__fa_1)                        0.48 *     1.32 r
+  U608/Y (sky130_fd_sc_hd__clkinv_1)                      0.05 *     1.38 f
+  U1207/COUT (sky130_fd_sc_hd__ha_1)                      0.17 *     1.55 f
+  U1209/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     1.74 f
+  U1211/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     1.92 f
+  U1213/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     2.11 f
+  U1215/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     2.30 f
+  U1217/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     2.49 f
+  U1219/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     2.68 f
+  U1220/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     2.87 f
+  U1222/COUT (sky130_fd_sc_hd__ha_1)                      0.19 *     3.06 f
+  U1224/COUT (sky130_fd_sc_hd__ha_1)                      0.21 *     3.27 f
+  U1225/COUT (sky130_fd_sc_hd__fa_1)                      0.40 *     3.66 f
+  U1013/COUT (sky130_fd_sc_hd__fa_1)                      0.38 *     4.04 f
+  U1352/COUT (sky130_fd_sc_hd__fa_1)                      0.36 *     4.40 f
+  U1226/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     4.66 f
+  U1351/COUT (sky130_fd_sc_hd__fa_1)                      0.35 *     5.01 f
+  U1227/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     5.27 f
+  U1357/COUT (sky130_fd_sc_hd__fa_1)                      0.35 *     5.62 f
+  U1230/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     5.88 f
+  U1369/COUT (sky130_fd_sc_hd__fa_1)                      0.35 *     6.23 f
+  U1229/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     6.49 f
+  U1367/COUT (sky130_fd_sc_hd__fa_1)                      0.35 *     6.85 f
+  U1228/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     7.10 f
+  U1365/COUT (sky130_fd_sc_hd__fa_1)                      0.35 *     7.46 f
+  U1361/COUT (sky130_fd_sc_hd__fah_1)                     0.26 *     7.71 f
+  U1364/COUT (sky130_fd_sc_hd__fa_1)                      0.38 *     8.09 f
+  U439/COUT (sky130_fd_sc_hd__fa_1)                       0.38 *     8.47 f
+  U1012/SUM (sky130_fd_sc_hd__fa_1)                       0.42 *     8.89 f
+  butterfly_0/Yi_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.00 *     8.89 f
+  data arrival time                                                  8.89
+
+  clock MYCLK (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  butterfly_0/Yi_full_F_reg[28]/CLK (sky130_fd_sc_hd__dfxtp_1)       9.00 r
+  library setup time                                     -0.11 *     8.89
+  data required time                                                 8.89
+  ------------------------------------------------------------------------------
+  data required time                                                 8.89
+  data arrival time                                                 -8.89
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

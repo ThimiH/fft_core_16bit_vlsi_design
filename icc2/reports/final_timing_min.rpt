@@ -1,0 +1,359 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -report_by design
+Design : fft_top
+Version: V-2023.12-SP5-2
+Date   : Tue Jul 29 20:41:30 2025
+****************************************
+
+  Startpoint: butterfly_0/Xr_full_F_reg[27] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xr_F_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xr_full_F_reg[27]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xr_full_F_reg[27]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xr_F_reg[14]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xr_F_reg[14]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Xr_full_F_reg[23] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xr_F_reg[10] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xr_full_F_reg[23]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xr_full_F_reg[23]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xr_F_reg[10]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xr_F_reg[10]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Yi_full_F_reg[13] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Yi_F_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Yi_full_F_reg[13]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Yi_full_F_reg[13]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Yi_F_reg[0]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Yi_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Xi_full_F_reg[27] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xi_F_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xi_full_F_reg[27]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xi_full_F_reg[27]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xi_F_reg[14]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xi_F_reg[14]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: fft_ctrl_sm_0/out_push_F_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out_push_F_reg (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  fft_ctrl_sm_0/out_push_F_reg/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  fft_ctrl_sm_0/out_push_F_reg/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  out_push_F_reg/D (sky130_fd_sc_hd__dfxtp_4)      0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  out_push_F_reg/CLK (sky130_fd_sc_hd__dfxtp_4)    0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Xi_full_F_reg[22] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xi_F_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xi_full_F_reg[22]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xi_full_F_reg[22]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xi_F_reg[9]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xi_F_reg[9]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Xi_full_F_reg[26] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xi_F_reg[13] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xi_full_F_reg[26]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xi_full_F_reg[26]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xi_F_reg[13]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xi_F_reg[13]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.27
+
+
+
+  Startpoint: butterfly_0/Yi_full_F_reg[16] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Yi_F_reg[3] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Yi_full_F_reg[16]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Yi_full_F_reg[16]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Yi_F_reg[3]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Yi_F_reg[3]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.28
+
+
+
+  Startpoint: butterfly_0/Xi_full_F_reg[16] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xi_F_reg[3] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xi_full_F_reg[16]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xi_full_F_reg[16]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xi_F_reg[3]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xi_F_reg[3]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.28
+
+
+
+  Startpoint: butterfly_0/Xi_full_F_reg[13] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: butterfly_0/Xi_F_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  butterfly_0/Xi_full_F_reg[13]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  butterfly_0/Xi_full_F_reg[13]/Q (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.25      0.25 r
+  butterfly_0/Xi_F_reg[0]/D (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  butterfly_0/Xi_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_4)
+                                                   0.00      0.00 r
+  library hold time                               -0.03     -0.03
+  data required time                                        -0.03
+  ------------------------------------------------------------------------
+  data required time                                        -0.03
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.28
+
+
+1

@@ -1,0 +1,45 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+	-sort_by slack
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:48:55 2025
+****************************************
+
+
+  Startpoint: in_imag[0] (input port clocked by MYCLK)
+  Endpoint: fft_ctrl_sm_0/write_data_1_F_reg[0]
+               (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: input_paths
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  in_imag[0] (in)                                         0.00       0.10 r
+  U3155/X (sky130_fd_sc_hd__a22o_1)                       0.10 *     0.20 r
+  fft_ctrl_sm_0/write_data_1_F_reg[0]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                          0.00 *     0.20 r
+  data arrival time                                                  0.20
+
+  clock MYCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  fft_ctrl_sm_0/write_data_1_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                                                     0.20 r
+  library hold time                                      -0.02 *     0.18
+  data required time                                                 0.18
+  ------------------------------------------------------------------------------
+  data required time                                                 0.18
+  data arrival time                                                 -0.20
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+1

@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : fft_top
 Version: V-2023.12
-Date   : Wed Jul  9 01:09:48 2025
+Date   : Tue Jul 22 09:48:39 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

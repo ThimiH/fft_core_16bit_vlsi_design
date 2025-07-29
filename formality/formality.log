@@ -1,0 +1,24 @@
+Info:  Net i:/WORK/fft_top/net13041 is undriven.
+Info:  Net i:/WORK/fft_top/net13042 is undriven.
+Info:  Net i:/WORK/fft_top/net13043 is undriven.
+Info:  Net i:/WORK/fft_top/net13044 is undriven.
+Info:  Net i:/WORK/fft_top/net13045 is undriven.
+Info:  Net i:/WORK/fft_top/net13046 is undriven.
+Info:  Net i:/WORK/fft_top/net13047 is undriven.
+Info:  Net i:/WORK/fft_top/net13048 is undriven.
+Info:  Net i:/WORK/fft_top/net13049 is undriven.
+Info:  Net i:/WORK/fft_top/net13050 is undriven.
+Info:  Net i:/WORK/fft_top/net13051 is undriven.
+Info:  Net i:/WORK/fft_top/net13052 is undriven.
+Info:  Net i:/WORK/fft_top/net13053 is undriven.
+Info:  Net i:/WORK/fft_top/net13054 is undriven.
+Info:  SVF Operation 14 (Line: 158) - ungroup.  Status: accepted
+Info:  SVF Operation 15 (Line: 163) - ungroup.  Status: accepted
+Info:  Pre-verification of r:/WORK/butterfly/DP_OP_45J2_122_1134 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/butterfly/DP_OP_46J2_123_1134 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/butterfly/mult_x_1 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/butterfly/mult_x_2 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/butterfly/mult_x_3 SUCCEEDED.
+Info:  Pre-verification of r:/WORK/butterfly/mult_x_4 SUCCEEDED.
+
+

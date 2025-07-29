@@ -1,0 +1,35 @@
+12:35:34    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./fft_simv -a simulate.log -pid 3299 -toolin /tmp/vcs_20250712070526_3298_user10..stdin -toolout /tmp/vcs_20250712070526_3298_user10..stdout  
+12:35:34    17 -->                                                                 [tcl] set ucliGUI::state
+12:35:34    18 -->                                                                     [tcl] set dveMisc::dve_log_file 1
+12:35:35    19 -->                                                                         [tcl] set ucliGUI::state
+12:35:35    20 -->                                                                             [tcl] ucliCore::getToolPID
+12:35:35    21 -->                                                                                 [tcl] synopsys::env hasTB
+12:35:35    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+12:35:35    23 -->                                                                                         [tcl] synUtils::setDVEInitPhase 1
+12:35:35    24 -->                                                                                             [tcl] gui_get_env SIMSETUP::SIMVPD
+12:35:35    25 --> ...  [tcl] synopsys::dump -type VPD -file /home/vlsi_lab/user10/Documents/steps/fft_core_16bit_vlsi_design/vcs/output/inter.vpd -locking
+12:35:35    26 --> ...      [tcl] synopsys::dump -autoflush on -fid VPD0
+12:35:35    27 --> ...          [tcl] set ::dve_fid VPD0
+12:35:35    28 --> ...              [tcl] synUtils::setDVEInitPhase 0
+12:35:35    29 --> ...                  [tcl] ucliCore::getToolPID
+12:35:35    30 --> ...                      [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpLgBvZY
+12:35:35    31 --> ...                          [tcl] synUtils::sendTool -active {_icl_start_rpc -version "T-2022.06-SP2-8_Full64" -sync_file /tmp/vcs_dve_rpc.user10.3299}
+12:35:36    32 --> ...                              [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user10.3299}
+12:35:37    33 --> ...                                  [tcl] dveMisc::vbusExpand fft_top_tb
+12:35:37    34 --> ...                                      [tcl] config endofsim noexit
+12:35:37    35 --> ...                                          [tcl] config onfail enable all
+12:35:37    36 --> ...                                              [tcl] config syscaddplainmembers
+12:35:37    37 --> ...                                                  [tcl] config syscaddsourcenames
+12:35:37    38 --> ...                                                      [tcl] config syscaddstructtypes
+12:35:37    39 --> ...                                                          [tcl] synopsys::listing -disable
+12:35:43    40 --> ...                                                              [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+12:35:43    41 --> ...                                                                  [tcl] synopsys::finish
+12:35:43    42 --> ...                                                                      [tcl] set ucliGUI::state
+12:35:43    43 --> ...                                                                          [tcl] gui_update_simulator_buttons
+12:35:43    44 --> ...                                                                              [tcl] set ucliGUI::state
+12:35:43    45 --> ...                                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+12:35:43    46 --> ...                                                                                      [tcl] set dveMisc::result
+12:35:43    47 --> ...                                                                                          [tcl] gui_update_simulator_buttons
+12:35:43    48 --> ...                                                                                              [tcl] catch {senv activeDomain} dveMisc::result 
+12:35:43    49 --> ...                                                                                                  [tcl] set dveMisc::result
+12:35:43    50 --> ...  [tcl] ucli_exit

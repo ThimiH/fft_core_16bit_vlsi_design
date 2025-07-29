@@ -1,0 +1,147 @@
+#@ # 
+#@ # Running icc2_shell Version V-2023.12-SP5-2 for linux64 -- Oct 30, 2024
+#@ # Date:   Tue Jul 29 20:13:14 2025
+#@ # Run by: user10@vlsilab
+#@ 
+
+start_gui
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+# =========[ ICC2 Physical Design Script ]=========
+# Created by: Thimira Hirushan
+# Date: 2025-07-04
+# Project: FFT Core 16-bit VLSI Design
+# Description: ICC2 script for place and route of synthesized FFT design
+# ======== Setup and Library Configuration ========
+set DESIGN_NAME "fft_top"
+set NETLIST_DIR "../netlists"
+# Update this path to point to the cloned library
+set TECH_DIR "../libs/sky130_library"
+set REPORTS_DIR "./reports"
+set OUTPUTS_DIR "./outputs"
+# Create output directories
+file mkdir $REPORTS_DIR
+file mkdir $OUTPUTS_DIR
+# Set search paths
+set_app_var search_path ". $TECH_DIR $NETLIST_DIR"
+# ======== 1. Library Setup ========
+# Create a new library first (without reference libraries)
+create_lib -technology $TECH_DIR/skywater130_fd_sc_hd.tf ${DESIGN_NAME}_lib
+# Save the created library
+save_lib ${DESIGN_NAME}_lib
+# Set the created library as current
+current_lib ${DESIGN_NAME}_lib
+# Step 8
+# Set reference libraries
+set_ref_libs -ref_libs $TECH_DIR/ndm/sky130_fd_sc_hd.ndm
+# Step 9
+# Derive the design
+derive_design_level_via_regions
+# Step 10
+# Read the verilog file
+read_verilog $NETLIST_DIR/fft_netlist.v
+link_block
+win_set_filter -visible -class cell -filter {assembly_die_margin bridge clock_margin filler_allowed_margin hard_macro_margin hard_margin route_blockage_margin seal_ring_margin soft_margin substrate} -layer {}
+win_set_filter -visible -class pseudo_bump -filter {deleted} -layer {}
+win_set_filter -visible -class pseudo_tsv -filter {deleted} -layer {}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-16}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pseudo_tsv pin_blockage block_shielding topology_node topology_edge topology_repeater annotation_shape core_area die_area edit_group shape via terminal fill_cell metal_area metal_area_hole placement_blockage }
+win_set_filter -class cell -filter {array assembly_die_margin bridge clock_margin filler_allowed_margin hard_macro_margin hard_margin route_blockage_margin seal_ring_margin soft_margin substrate} -layer {}
+win_set_filter -class pseudo_bump -filter {deleted} -layer {}
+win_set_filter -class pseudo_tsv -filter {deleted} -layer {}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-16}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pseudo_tsv pin_blockage topology_node topology_edge topology_repeater annotation_shape edit_group shape via metal_area metal_area_hole placement_blockage }
+# Step 11
+# Create a 100 MHz clock
+create_clock -name clk -period 10.0 [get_ports clk]
+# Step 12 - Alternative with aspect ratio control
+# Initialize the floorplan
+initialize_floorplan     -core_utilization 0.7     -side_ratio 1.0     -core_offset "10.0 10.0 10.0 10.0"
+# Step 13
+# read parasitics
+read_parasitic_tech -tlup $TECH_DIR/skywater130.nominal.tluplus -layermap $TECH_DIR/skywater130.mw2itf.map
+set_parasitic_parameters -late_spec $TECH_DIR/skywater130.nominal.tluplus
+# Step 14
+# Place the design
+place_opt
+config_flow
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Step 15
+# Route the design
+route_auto
+refresh_via_ladder_constraints -performance true -emt false
+# Step 16
+# Clock tree synthesis
+clock_opt
+config_flow
+config_flow -stage cfinal_opto_prelude
+# Step 19
+# Final design rule check
+check_design -checks all
+suppress_message -force CMD-013
+redirect -file /dev/null { set previous_unified_check_report_format_enable [get_app_option_value -name da.common.unified_check_report_format] }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value false }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value $previous_unified_check_report_format_enable }
+check_design
+suppress_message -force CMD-013
+redirect -file /dev/null { set previous_unified_check_report_format_enable [get_app_option_value -name da.common.unified_check_report_format] }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value false }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value $previous_unified_check_report_format_enable }
+check_design -help
+check_design -checks -help
+suppress_message -force CMD-013
+redirect -file /dev/null { set previous_unified_check_report_format_enable [get_app_option_value -name da.common.unified_check_report_format] }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value false }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value $previous_unified_check_report_format_enable }
+check_design -checks *
+suppress_message -force CMD-013
+redirect -file /dev/null { set previous_unified_check_report_format_enable [get_app_option_value -name da.common.unified_check_report_format] }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value false }
+redirect -file /dev/null { set_app_options -name da.common.unified_check_report_format -value $previous_unified_check_report_format_enable }
+update timing
+# Step 21
+# Generate reports
+report_timing -delay_type max -max_paths 10 > $REPORTS_DIR/final_timing_max.rpt
+report_timing -delay_type min -max_paths 10 > $REPORTS_DIR/final_timing_min.rpt
+report_power > $REPORTS_DIR/final_power.rpt
+report_area > $REPORTS_DIR/final_area.rpt
+report_congestion > $REPORTS_DIR/congestion.rpt
+report_design > $REPORTS_DIR/design_summary.rpt
+# Step 22
+# Save final design
+save_block -as ${DESIGN_NAME}_final
+# Step 23
+# Write output files
+write_def $OUTPUTS_DIR/${DESIGN_NAME}_final.def
+write_verilog $OUTPUTS_DIR/${DESIGN_NAME}_final.v
+write_sdf $OUTPUTS_DIR/${DESIGN_NAME}_final.sdf
+write_sdc $OUTPUTS_DIR/${DESIGN_NAME}_final.sdc
+write_parasitics -format SPEF $OUTPUTS_DIR/${DESIGN_NAME}_final.spef
+write_sdc -output $OUTPUTS_DIR/${DESIGN_NAME}_final.sdc
+write_parasitics -help
+write_parasitics -output $OUTPUTS_DIR/${DESIGN_NAME}_final.spef
+# Step 24
+# Optional: Write GDS if stream layers are available
+write_gds $OUTPUTS_DIR/${DESIGN_NAME}_final.gds
+# Step 25
+# Final summary
+echo "ICC2 flow completed successfully!"
+echo "Check reports in: $REPORTS_DIR"
+echo "Check outputs in: $OUTPUTS_DIR"
+# Save and exit
+save_lib ${DESIGN_NAME}_lib
+exit

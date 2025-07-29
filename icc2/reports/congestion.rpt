@@ -1,0 +1,15 @@
+****************************************
+Report : congestion
+Design : fft_top
+Version: V-2023.12-SP5-2
+Date   : Tue Jul 29 20:41:37 2025
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |    1316 |     3 |    1288  ( 5.13%) |       1
+H routing |     497 |     2 |     487  ( 3.88%) |      10
+V routing |     819 |     3 |     801  ( 6.39%) |       1
+
+1

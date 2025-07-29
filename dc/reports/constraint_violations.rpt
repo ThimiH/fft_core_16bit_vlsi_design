@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : fft_top
+Version: V-2023.12
+Date   : Tue Jul 22 16:02:07 2025
+****************************************
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   fft_top                  51000.00       56678.11       -5678.11  (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   fft_top                      0.00          20.18         -20.18  (VIOLATED)
+
+
+1

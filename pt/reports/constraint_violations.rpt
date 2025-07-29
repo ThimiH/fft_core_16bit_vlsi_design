@@ -1,0 +1,22 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:55:44 2025
+****************************************
+
+
+
+
+   max_area
+
+                             Required        Actual
+   Design                       Area           Area          Slack
+   -----------------------------------------------------------------
+   fft_top                  51000.00       56678.45       -5678.45  (VIOLATED)
+
+
+Warning: Transition times on not annotated delay arcs havebeen set to zero. Cannot perform max_transition checking. (PTE-057)
+1

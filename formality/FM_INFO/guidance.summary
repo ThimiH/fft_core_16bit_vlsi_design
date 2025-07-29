@@ -1,0 +1,22 @@
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :          2          0          0          0          2
+boundary_netlist    :          1          0          0          0          1
+change_names        :         11          0          0          0         11
+constant            :          2          0          0          0          2
+constraints         :          4          0          0          0          4
+datapath            :          2          0          0          0          2
+environment         :          5          0          0          0          5
+file_info           :          6          0          0          0          6
+mark                :          2          0          0          0          2
+merge               :          2          0          0          0          2
+multiplier          :          4          0          0          0          4
+reg_constant        :          1          0          0          0          1
+reg_merging         :         20          0          0          0         20
+replace             :         20          0          0          0         20
+ungroup             :          3          0          0          0          3
+uniquify            :          6          0          0          0          6
+----------------------------------------------------------------------------
+Total               :         92          0          0          0         92

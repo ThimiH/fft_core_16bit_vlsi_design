@@ -1,0 +1,18 @@
+****************************************
+Report : timing
+	-path_type summary
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Tue Jul 22 18:48:55 2025
+****************************************
+
+Startpoint                      Endpoint                           Slack
+------------------------------------------------------------------
+butterfly_0/Zib_F_reg[0]/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                butterfly_0/Yi_full_F_reg[28]/D (sky130_fd_sc_hd__dfxtp_1)
+                                                                    0.00
+
+1

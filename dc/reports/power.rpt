@@ -4,13 +4,13 @@ Report : power
         -analysis_effort low
 Design : fft_top
 Version: V-2023.12
-Date   : Wed Jul  9 01:09:48 2025
+Date   : Tue Jul 22 16:02:07 2025
 ****************************************
 
 
 Library(s) Used:
 
-    sky130_fd_sc_hd__tt_025C_1v80 (File: /home/vlsi_lab/user10/Documents/mp_e19276/fft_core_16bit_vlsi_design/libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db)
+    sky130_fd_sc_hd__tt_025C_1v80 (File: /home/vlsi_lab/user10/Documents/steps/fft_core_16bit_vlsi_design/libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db)
 
 
 Operating Conditions: tt_025C_1v80   Library: sky130_fd_sc_hd__tt_025C_1v80
@@ -31,12 +31,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   4.2252 mW   (96%)
-  Net Switching Power  = 162.8029 uW    (4%)
+  Cell Internal Power  =   4.0265 mW   (96%)
+  Net Switching Power  = 183.0804 uW    (4%)
                          ---------
-Total Dynamic Power    =   4.3880 mW  (100%)
+Total Dynamic Power    =   4.2095 mW  (100%)
 
-Cell Leakage Power     =  19.7387 nW
+Cell Leakage Power     =  20.1958 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -45,10 +45,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      4.0919            0.0000            0.0000            4.0919  (  93.25%)  i
-register       3.7560e-02        2.3928e-02            8.3843        6.1497e-02  (   1.40%)
+clock_network      3.8757            0.0000            0.0000            3.8757  (  92.07%)  i
+register       4.3950e-02        2.3922e-02            8.1173        6.7890e-02  (   1.61%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  9.5697e-02            0.1389           11.3544            0.2346  (   5.35%)
+combinational      0.1068            0.1592           12.0785            0.2660  (   6.32%)
 --------------------------------------------------------------------------------------------------
-Total              4.2252 mW         0.1628 mW        19.7387 nW         4.3880 mW
+Total              4.0265 mW         0.1831 mW        20.1958 nW         4.2096 mW
 1

@@ -5,9 +5,9 @@
 
 # ======== Directory Configuration ========
 set project_root   "../"
-set log_dir        "${project_root}/logs"
-set netlist_dir    "${project_root}/netlist"
-set report_dir     "${project_root}/reports"
+set log_dir        "${project_root}/dc/logs"
+set netlist_dir    "${project_root}/netlists"
+set report_dir     "${project_root}/dc/reports"
 
 # Create directories if they don't exist
 file mkdir $log_dir
@@ -19,7 +19,7 @@ file mkdir $report_dir
 # Set library
 set target_library [list ../libs/sky130_fd_sc_hd/sky130_fd_sc_hd__tt_025C_1v80.db]
 set link_library [list * $target_library]
-set synthetic_library [list dw_foundation.sldb]
+# set synthetic_library [list dw_foundation.sldb]
 
 # Read Verilog files (Update file list as needed)
 read_verilog {
@@ -32,39 +32,40 @@ read_verilog {
 }
 current_design fft_top
 
-# Set clock
-create_clock -name MYCLK -period 10 [get_ports clk]
-set_clock_uncertainty 1.0 [get_clocks MYCLK]
-set_clock_uncertainty -hold 0.2 [get_clocks MYCLK]
+# Read SDC constraints file
+puts "Reading SDC constraints..."
+read_sdc ../constraints/fft_top.sdc
+puts "SDC constraints loaded successfully."
 
-# Input delays
-set_input_delay -max 2 [get_ports "in_real[*]"]
-set_input_delay -min 0.1 [get_ports "in_real[*]"]
-set_input_delay -max 2 [get_ports "in_imag[*]"]
-set_input_delay -min 0.1 [get_ports "in_imag[*]"]
-
-# Output delays
-set_output_delay -max 2 [get_ports "out_real_F[*]"]
-set_output_delay -min 0.1 [get_ports "out_real_F[*]"]
-set_output_delay -max 2 [get_ports "out_imag_F[*]"]
-set_output_delay -min 0.1 [get_ports "out_imag_F[*]"]
+# Check constraints before compilation
+puts "Checking design constraints..."
+check_design
+check_timing
 
 # Compile
 compile_ultra
 
 # Generate reports
-report_timing -to [get_ports "out_real_F[*]"] > reports/timing_out_real.rpt
-report_timing -to [get_ports "out_imag_F[*]"] > reports/timing_out_imag.rpt
+# report_timing -to [get_ports "out_real_F[*]"] > reports/timing_out_real.rpt
+# report_timing -to [get_ports "out_imag_F[*]"] > reports/timing_out_imag.rpt
+report_timing -max_paths 10 -transition_time -nets -input_pins > reports/timing_summary.rpt
+report_constraint -all_violators > reports/constraint_violations.rpt
+report_clock -attributes > reports/clock_report.rpt
 report_power > reports/power.rpt
 report_area > reports/area.rpt
 report_port -verbose > reports/ports.rpt
 
 # Write synthesized netlist
-write -format verilog -hierarchy -output ../netlist/fft_netlist.v
+write -format verilog -hierarchy -output ../netlists/fft_netlist.v
 
 # Save DC session info for Formality
-write_sdf -version 2.1 ../netlist/fft.sdf
-write_svf -output ../netlist/fft.svf
+write_sdf -version 2.1 ../netlists/fft.sdf
+
+# Write SDC file for downstream tools (P&R, STA)
+write_sdc ../netlists/fft_constraints.sdc
+
+# Write design database for reference
+write -format ddc -hierarchy -output ../netlists/fft_top.ddc
 
 # # Exit
 # exit

@@ -1,0 +1,23 @@
+**************************************************
+Report         : status
+
+Reference      : r:/WORK/fft_top
+Implementation : i:/WORK/fft_top
+Version        : V-2023.12-SP5
+Date           : Tue Jul 22 10:51:37 2025
+**************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+----------------------
+ Reference design: r:/WORK/fft_top
+ Implementation design: i:/WORK/fft_top
+ 1039 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      34    1005       0    1039
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
