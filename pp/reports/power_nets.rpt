@@ -1,0 +1,32 @@
+****************************************
+Report : Averaged Power
+Design : fft_top
+Version: V-2023.12-SP2
+Date   : Wed Jul 30 00:20:08 2025
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0194    0.0000    0.0000    0.0194 (68.11%)  i
+register                1.038e-03 8.030e-04 8.211e-09 1.841e-03 ( 6.47%)  
+combinational           3.030e-03 4.202e-03 1.306e-08 7.232e-03 (25.42%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 5.005e-03   (17.59%)
+  Cell Internal Power  =    0.0234   (82.41%)
+  Cell Leakage Power   = 2.127e-08   ( 0.00%)
+                         ---------
+Total Power            =    0.0285  (100.00%)
+
+1
