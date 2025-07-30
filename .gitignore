@@ -1,2 +1,4 @@
 .vscode/
 *__pycache__/
+libs/sky130_fd_sc_hd/sky130_gds3d.txt
+libs/sky130_fd_sc_hd/sky130_PDF.txt
