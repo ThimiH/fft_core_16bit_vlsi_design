@@ -43,8 +43,8 @@ derive_design_level_via_regions
 read_verilog $NETLIST_DIR/fft_netlist.v
 
 # Step 11
-# Create a 100 MHz clock
-create_clock -name clk -period 10.0 [get_ports clk]
+# Read constraints file (SDC)
+read_sdc $NETLIST_DIR/fft_constraints.sdc
 
 # Step 12 - Alternative with aspect ratio control
 # Initialize the floorplan
@@ -52,6 +52,14 @@ initialize_floorplan \
     -core_utilization 0.7 \
     -side_ratio 1.0 \
     -core_offset "10.0 10.0 10.0 10.0"
+
+create_pg_ring_pattern ring_pattern \
+    -horizontal_layer met3 \
+    -horizontal_width 2.0 \
+    -horizontal_spacing 2.0 \
+    -vertical_layer met2 \
+    -vertical_width 2.0 \
+    -vertical_spacing 2.0
 
 # Step 13
 # read parasitics
